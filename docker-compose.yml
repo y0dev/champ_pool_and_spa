@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  # Development service
+  dev:
+    build:
+      context: .
+      target: deps
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    working_dir: /app
+    command: npm run dev
+    environment:
+      - NODE_ENV=development
+    profiles:
+      - dev
+
+  # Production service
+  prod:
+    build:
+      context: .
+      target: runner
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+    profiles:
+      - prod
+
+  # Build service
+  build:
+    build:
+      context: .
+      target: builder
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: npm run build
+    profiles:
+      - build

@@ -1,36 +1,203 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Champion Pool & Spa - Business Website
+
+A professional, modern business website for Champion Pool & Spa, built with Next.js and TailwindCSS.
+
+## Features
+
+- **Responsive Design**: Mobile-first design that works on all devices
+- **Modern UI/UX**: Clean, professional design with black and blue branding
+- **SEO Optimized**: Meta tags, structured data, and best practices
+- **Fast Performance**: Built with Next.js for optimal performance
+- **Contact Forms**: Integrated contact and quote request forms
+- **Gallery**: Portfolio showcase with project filtering
+- **Testimonials**: Customer reviews and ratings
+- **Services**: Comprehensive service listings with pricing
+
+## Pages
+
+- **Home**: Hero banner, services overview, testimonials
+- **About**: Company background, values, team information
+- **Services**: Detailed service offerings with descriptions
+- **Gallery**: Project portfolio with filtering
+- **Testimonials**: Customer reviews and feedback
+- **Contact**: Contact form and business information
+
+## Tech Stack
+
+- **Frontend**: Next.js 15, React 19, TypeScript
+- **Styling**: TailwindCSS 4
+- **Deployment**: Docker, Docker Compose
+- **Build Tool**: Turbopack
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+- Docker (for deployment)
+
+### Development
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd champs_pool_and_spa
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Building for Production
+
+1. **Build the project**
+   ```bash
+   npm run build
+   ```
+
+2. **Start production server**
+   ```bash
+   npm start
+   ```
+
+## Docker Deployment
+
+### Development with Docker
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Start development environment
+docker-compose --profile dev up --build
+
+# Stop development environment
+docker-compose --profile dev down
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Production with Docker
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Build and start production environment
+docker-compose --profile prod up --build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Stop production environment
+docker-compose --profile prod down
+```
 
-## Learn More
+### Build Only
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Build the project in Docker
+docker-compose --profile build up --build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Manual Docker Commands
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Build the image
+docker build -t champion-pool-spa .
 
-## Deploy on Vercel
+# Run the container
+docker run -p 3000:3000 champion-pool-spa
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+champs_pool_and_spa/
+├── src/
+│   ├── app/                 # Next.js app router
+│   │   ├── about/          # About page
+│   │   ├── services/       # Services page
+│   │   ├── gallery/        # Gallery page
+│   │   ├── testimonials/   # Testimonials page
+│   │   ├── contact/        # Contact page
+│   │   ├── layout.tsx      # Root layout
+│   │   └── page.tsx        # Home page
+│   ├── components/         # Reusable components
+│   │   ├── Header.tsx      # Navigation header
+│   │   ├── Footer.tsx      # Site footer
+│   │   ├── Hero.tsx        # Hero section
+│   │   ├── Services.tsx    # Services showcase
+│   │   ├── About.tsx       # About section
+│   │   ├── Gallery.tsx     # Portfolio gallery
+│   │   ├── Testimonials.tsx # Customer reviews
+│   │   └── Contact.tsx     # Contact form
+│   └── app/globals.css     # Global styles
+├── public/                  # Static assets
+├── Dockerfile              # Docker configuration
+├── docker-compose.yml      # Docker Compose setup
+├── next.config.ts          # Next.js configuration
+├── package.json            # Dependencies and scripts
+└── README.md               # This file
+```
+
+## Customization
+
+### Branding Colors
+
+The website uses a black and blue color scheme. To customize:
+
+1. **Primary Blue**: `#3b82f6` (blue-600)
+2. **Dark Blue**: `#1e40af` (blue-700)
+3. **Navy Blue**: `#1e3a8a` (blue-800)
+4. **Black**: `#111827` (gray-900)
+
+### Content Updates
+
+- **Company Information**: Update contact details in `src/components/Contact.tsx`
+- **Services**: Modify service offerings in `src/components/Services.tsx`
+- **About Content**: Edit company story in `src/components/About.tsx`
+- **Testimonials**: Update customer reviews in `src/components/Testimonials.tsx`
+
+### Images
+
+Replace placeholder images with actual project photos:
+- Update image paths in components
+- Add images to the `public/` directory
+- Optimize images for web use
+
+## SEO Features
+
+- Meta tags for all pages
+- Open Graph tags for social sharing
+- Structured data markup
+- Semantic HTML structure
+- Fast loading times
+- Mobile-friendly design
+
+## Performance
+
+- Next.js optimization
+- TailwindCSS for minimal CSS
+- Image optimization
+- Code splitting
+- Lazy loading components
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers
+
+## License
+
+This project is proprietary to Champion Pool & Spa.
+
+## Support
+
+For technical support or questions about the website, please contact the development team.
+
+---
+
+**Champion Pool & Spa** - Professional Pool & Spa Services
