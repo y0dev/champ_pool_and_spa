@@ -75,8 +75,7 @@ export const NAV_LINKS = [
   { name: "Services", href: "#services" },
   { name: "Service Areas", href: "#service-areas" },
   { name: "Gallery", href: "#gallery" },
-  { name: "Reviews", href: "#reviews" },
-  { name: "Contact", href: "#contact" }
+  { name: "Reviews", href: "#reviews" }
 ];
 
 // Footer Links

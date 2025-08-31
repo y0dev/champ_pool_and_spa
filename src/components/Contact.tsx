@@ -33,6 +33,7 @@ export default function Contact() {
         }),
       });
 
+      console.log(response);
       if (response.ok) {
         setSubmitStatus('success');
         setFormData({
@@ -91,7 +92,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500 bg-white"
                     placeholder="Your full name"
                   />
                 </div>
@@ -107,7 +108,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500 bg-white"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -124,7 +125,7 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500 bg-white"
                     placeholder="(555) 123-4567"
                   />
                 </div>
@@ -138,12 +139,12 @@ export default function Contact() {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 bg-white"
                   >
-                    <option value="">Select a service</option>
-                    <option value="pool-maintenance">Pool Maintenance</option>
-                    <option value="pool-repairs">Pool Repairs</option>
-                    <option value="general-inquiry">General Inquiry</option>
+                    <option value="" className="text-gray-500">Select a service</option>
+                    <option value="pool-maintenance" className="text-gray-900">Pool Maintenance</option>
+                    <option value="pool-repairs" className="text-gray-900">Pool Repairs</option>
+                    <option value="general-inquiry" className="text-gray-900">General Inquiry</option>
                   </select>
                 </div>
               </div>
@@ -159,7 +160,7 @@ export default function Contact() {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500 bg-white"
                   placeholder="Tell us about your project or service needs..."
                 />
               </div>
