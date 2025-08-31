@@ -37,6 +37,27 @@ A professional, modern business website for Champion Pool & Spa, built with Next
 - npm or yarn
 - Docker (for deployment)
 
+### Web3Forms Setup
+The contact form uses [Web3Forms](https://web3forms.com/) for form submissions. To set this up:
+
+1. **Get Your Access Key:**
+   - Visit [https://web3forms.com/](https://web3forms.com/)
+   - Click "Get Access Key" 
+   - Enter your email and get your free access key
+
+2. **Configure Environment Variables:**
+   - Create a `.env.local` file in the root directory
+   - Add your access key:
+     ```
+     NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your_actual_access_key_here
+     ```
+   - Replace `your_actual_access_key_here` with the key you received
+
+3. **Test the Form:**
+   - Start the development server
+   - Fill out and submit the contact form
+   - Check your email for the form submission
+
 ### Development
 
 1. **Clone the repository**

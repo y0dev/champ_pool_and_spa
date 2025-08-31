@@ -157,3 +157,8 @@ export const SERVICE_AREA_DETAILS = {
   ],
   radius: "Metro Area Coverage"
 };
+
+// Web3Forms Configuration
+export const WEB3FORMS_CONFIG = {
+  accessKey: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || 'YOUR_WEB3FORMS_ACCESS_KEY'
+};

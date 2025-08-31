@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { CONTACT_INFO } from '@/utils/constants';
+import { CONTACT_INFO, WEB3FORMS_CONFIG } from '@/utils/constants';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,10 +12,45 @@ export default function Contact() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_CONFIG.accessKey,
+          ...formData,
+          subject: `New Contact Form Submission - ${formData.service || 'General Inquiry'}`,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -106,13 +141,9 @@ export default function Contact() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
-                    <option value="pool-cleaning">Pool Cleaning</option>
                     <option value="pool-maintenance">Pool Maintenance</option>
-                    <option value="spa-installation">Spa Installation</option>
                     <option value="pool-repairs">Pool Repairs</option>
-                    <option value="water-treatment">Water Treatment</option>
-                    <option value="equipment-upgrades">Equipment Upgrades</option>
-                    <option value="other">Other</option>
+                    <option value="general-inquiry">General Inquiry</option>
                   </select>
                 </div>
               </div>
@@ -135,10 +166,32 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                disabled={isSubmitting}
+                className={`w-full font-semibold py-3 px-6 rounded-lg transition-colors ${
+                  isSubmitting 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-blue-600 hover:bg-blue-700 text-white'
+                }`}
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
+
+              {/* Submission Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                  <p className="text-green-800 text-center">
+                    ✅ Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.
+                  </p>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <p className="text-red-800 text-center">
+                    ❌ Sorry, there was an error sending your message. Please try again or contact us directly.
+                  </p>
+                </div>
+              )}
             </form>
           </div>
 
