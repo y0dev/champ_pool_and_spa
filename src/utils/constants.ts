@@ -222,7 +222,7 @@ export const GALLERY_PROJECTS = [
     title: "Pool Maintenance Services",
     category: "Maintenance",
     description: "Comprehensive pool maintenance for both residential and commercial pools. Includes regular cleaning, chemical balancing, equipment checks, water quality testing, and seasonal maintenance. Perfect for homeowners and property managers.",
-    image: "/images/gallery/residential-maintenance.jpg",
+    image: "/images/gallery/pool-maintenance.jpg",
     beforeAfter: false
   },
   {
@@ -230,7 +230,7 @@ export const GALLERY_PROJECTS = [
     title: "Pool Equipment Repair & Maintenance",
     category: "Repair",
     description: "Expert repair and maintenance of all pool equipment including pumps, filters, heaters, automation systems, and safety equipment. Serving both residential and commercial pool owners with quick, reliable service.",
-    image: "/images/gallery/pool-maintenance.jpg",
+    image: "/images/gallery/pool-repair.jpg",
     beforeAfter: false
   },
   {
@@ -241,14 +241,14 @@ export const GALLERY_PROJECTS = [
     image: "/images/gallery/leak-detection.jpg",
     beforeAfter: false
   },
-  {
-    id: 4,
-    title: "Water Quality & Filtration Services",
-    category: "Maintenance",
-    description: "Complete water quality management and filtration system services. We handle chemical balancing, filter cleaning, water testing, and system optimization for both residential and commercial pools.",
-    image: "/images/gallery/filter-repair.jpg",
-    beforeAfter: false
-  }
+  // {
+  //   id: 4,
+  //   title: "Water Quality & Filtration Services",
+  //   category: "Maintenance",
+  //   description: "Complete water quality management and filtration system services. We handle chemical balancing, filter cleaning, water testing, and system optimization for both residential and commercial pools.",
+  //   image: "/images/gallery/filter-repair.jpg",
+  //   beforeAfter: false
+  // }
 ];
 
 // Web3Forms Configuration
