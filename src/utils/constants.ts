@@ -219,50 +219,34 @@ export const GALLERY_CATEGORIES = {
 export const GALLERY_PROJECTS = [
   {
     id: 1,
-    title: "Residential Pool Maintenance",
+    title: "Pool Maintenance Services",
     category: "Maintenance",
-    description: "Regular maintenance service for a family pool, including cleaning, chemical balancing, and equipment checks.",
+    description: "Comprehensive pool maintenance for both residential and commercial pools. Includes regular cleaning, chemical balancing, equipment checks, water quality testing, and seasonal maintenance. Perfect for homeowners and property managers.",
     image: "/images/gallery/residential-maintenance.jpg",
     beforeAfter: false
   },
   {
     id: 2,
-    title: "Commercial Pool Maintenance",
-    category: "Maintenance",
-    description: "Ongoing maintenance for a community pool with multiple users, ensuring safety and cleanliness.",
-    image: "/images/gallery/commercial-maintenance.jpg",
+    title: "Pool Equipment Repair & Maintenance",
+    category: "Repair",
+    description: "Expert repair and maintenance of all pool equipment including pumps, filters, heaters, automation systems, and safety equipment. Serving both residential and commercial pool owners with quick, reliable service.",
+    image: "/images/gallery/pool-maintenance.jpg",
     beforeAfter: false
   },
   {
     id: 3,
-    title: "Pool Pump Repair",
-    category: "Repair",
-    description: "Quick diagnosis and repair of a malfunctioning pool pump, restoring proper water circulation.",
-    image: "/images/gallery/pool-pump-repair.jpg",
-    beforeAfter: false
-  },
-  {
-    id: 4,
-    title: "Pool Filter System Repair",
-    category: "Repair",
-    description: "Repair and maintenance of pool filtration system to ensure crystal clear water quality.",
-    image: "/images/gallery/filter-repair.jpg",
-    beforeAfter: false
-  },
-  {
-    id: 5,
     title: "Pool Leak Detection & Repair",
     category: "Repair",
-    description: "Professional leak detection and repair service to prevent water loss and structural damage.",
+    description: "Professional leak detection and repair services using advanced technology. We locate and fix leaks in residential and commercial pools, preventing water loss and structural damage. Includes pressure testing and repair.",
     image: "/images/gallery/leak-detection.jpg",
     beforeAfter: false
   },
   {
-    id: 6,
-    title: "Pool Equipment Maintenance",
+    id: 4,
+    title: "Water Quality & Filtration Services",
     category: "Maintenance",
-    description: "Comprehensive maintenance of pool equipment including pumps, filters, heaters, and automation systems.",
-    image: "/images/gallery/equipment-maintenance.jpg",
+    description: "Complete water quality management and filtration system services. We handle chemical balancing, filter cleaning, water testing, and system optimization for both residential and commercial pools.",
+    image: "/images/gallery/filter-repair.jpg",
     beforeAfter: false
   }
 ];
