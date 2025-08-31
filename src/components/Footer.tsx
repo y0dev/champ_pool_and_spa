@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BUSINESS_INFO, FOOTER_LINKS } from '@/utils/constants';
+import { BUSINESS_INFO, CONTACT_INFO, FOOTER_LINKS } from '@/utils/constants';
 
 export default function Footer() {
   return (
@@ -65,9 +65,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2">
-              <li className="text-gray-300">(972) 765-6162</li>
-              <li className="text-gray-300">service@championpoolandspa.com</li>
-              <li className="text-gray-300">Daily 9:00 AM - 7:00 PM</li>
+              <li className="text-gray-300">{CONTACT_INFO.phone}</li>
+              <li className="text-gray-300">{CONTACT_INFO.email}</li>
+              <li className="text-gray-300">{CONTACT_INFO.businessHours}</li>
             </ul>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 {BUSINESS_INFO.name}. All rights reserved.
+              © {new Date().getFullYear()} {BUSINESS_INFO.name}. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">

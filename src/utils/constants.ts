@@ -1,8 +1,12 @@
 // Business Information
 export const BUSINESS_INFO = {
   name: "Champion Pool & Spa",
+  phone: "(972) 765-6162",
   tagline: "Professional pool and spa services serving the Dallas-Fort Worth Metro Area",
   yearsExperience: "5+",
+  customers: "100+",
+  satisfactionRate: "100%",
+  businessHours: "Daily",
   description: "Experience the difference that 5+ years of expertise makes.",
   aboutDescription: "For over 5 years, Champion Pool & Spa has been the trusted name in professional pool and spa services throughout the Dallas-Fort Worth Metro Area. What started as a small family business has grown into a comprehensive service provider, serving hundreds of satisfied customers across Dallas, McKinney, Frisco, Prosper, Allen, Plano, Fairview, and Addison.",
   mission: "We are committed to providing exceptional pool and spa services that exceed our customers' expectations. Our dedication to quality, reliability, and customer satisfaction has made us a trusted name in the Dallas-Fort Worth Metro Area.",
@@ -12,12 +16,18 @@ export const BUSINESS_INFO = {
     "Professional Excellence",
     "Reliability",
     "Integrity"
-  ]
+  ],
+  certifications: {
+    licensedAndInsured: "Licensed & Insured",
+    bbbAccredited: "BBB Accredited",
+    poolAndSpaAssociation: "Pool & Spa Association",
+    safetyCertified: "Safety Certified"
+  }
 };
 
 // Contact Information
 export const CONTACT_INFO = {
-  phone: "(972) 765-6162",
+  phone: BUSINESS_INFO.phone,
   email: "service@championpoolandspa.com",
   serviceArea: "Dallas-Fort Worth Metro Area",
   businessHours: "Daily 9:00 AM - 7:00 PM",
@@ -71,10 +81,9 @@ export const TRUST_INDICATORS = [
 // Navigation Links
 export const NAV_LINKS = [
   { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "Reviews", href: "#reviews" }
+  { name: "About", href: "#about" },
+  { name: "Gallery", href: "#gallery" }
 ];
 
 // Footer Links

@@ -85,15 +85,15 @@ export default function About() {
                 <div className="text-gray-600 text-sm">Years Experience</div>
               </div>
               <div className="text-center bg-blue-50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-blue-600 mb-2">500+</div>
+                <div className="text-2xl font-bold text-blue-600 mb-2">{BUSINESS_INFO.customers}</div>
                 <div className="text-gray-600 text-sm">Happy Customers</div>
               </div>
               <div className="text-center bg-blue-50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-blue-600 mb-2">Daily</div>
+                <div className="text-2xl font-bold text-blue-600 mb-2">{BUSINESS_INFO.businessHours}</div>
                 <div className="text-gray-600 text-sm">Service Hours</div>
               </div>
               <div className="text-center bg-blue-50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-blue-600 mb-2">100%</div>
+                <div className="text-2xl font-bold text-blue-600 mb-2">{BUSINESS_INFO.satisfactionRate}</div>
                 <div className="text-gray-600 text-sm">Satisfaction Rate</div>
               </div>
             </div>
@@ -114,16 +114,16 @@ export default function About() {
               <h4 className="font-semibold text-gray-900 mb-4 font-display">Certifications & Memberships</h4>
               <div className="grid grid-cols-2 gap-2">
                 <span className="bg-blue-100 text-blue-800 px-3 py-2 rounded-lg text-sm font-medium text-center">
-                  Licensed & Insured
+                  {BUSINESS_INFO.certifications.licensedAndInsured}
                 </span>
                 <span className="bg-blue-100 text-blue-800 px-3 py-2 rounded-lg text-sm font-medium text-center">
-                  BBB Accredited
+                  {BUSINESS_INFO.certifications.bbbAccredited}
                 </span>
                 <span className="bg-blue-100 text-blue-800 px-3 py-2 rounded-lg text-sm font-medium text-center">
-                  Pool & Spa Association
+                  {BUSINESS_INFO.certifications.poolAndSpaAssociation}
                 </span>
                 <span className="bg-blue-100 text-blue-800 px-3 py-2 rounded-lg text-sm font-medium text-center">
-                  Safety Certified
+                  {BUSINESS_INFO.certifications.safetyCertified}
                 </span>
               </div>
             </div>
