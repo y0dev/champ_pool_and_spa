@@ -156,6 +156,7 @@ export default function Contact({ selectedService = '' }: ContactProps) {
                   >
                     <option value="" className="text-gray-500">Select a service</option>
                     <option value="pool-maintenance" className="text-gray-900">Pool Maintenance</option>
+                    <option value="pool-cleaning" className="text-gray-900">Pool Cleaning</option>
                     <option value="pool-repairs" className="text-gray-900">Pool Repairs</option>
                     <option value="general-inquiry" className="text-gray-900">General Inquiry</option>
                   </select>
