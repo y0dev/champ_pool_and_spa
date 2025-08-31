@@ -2,10 +2,19 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { BUSINESS_INFO, NAV_LINKS } from '@/utils/constants';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  
+  // Hide header on legal pages
+  const isLegalPage = pathname === '/privacy' || pathname === '/terms';
+  
+  if (isLegalPage) {
+    return null;
+  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

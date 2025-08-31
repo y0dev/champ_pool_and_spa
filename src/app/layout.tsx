@@ -17,7 +17,7 @@ const playfairDisplay = Playfair_Display({
   display: "swap",
 });
 
-        export const metadata: Metadata = SEO_METADATA;
+export const metadata: Metadata = SEO_METADATA;
 
 export const viewport = {
   width: 'device-width',

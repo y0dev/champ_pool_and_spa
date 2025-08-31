@@ -1,9 +1,35 @@
 import { BUSINESS_INFO, CONTACT_INFO } from '@/utils/constants';
+import Link from 'next/link';
 
 export default function TermsOfService() {
   return (
     <div className="min-h-screen bg-gray-50">
-
+      {/* Navigation Bar */}
+      <nav className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center h-auto sm:h-16 py-4 sm:py-0 space-y-4 sm:space-y-0">
+            <div className="flex items-center space-x-8">
+              <Link href="/" className="text-lg sm:text-xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                ← Back to Home
+              </Link>
+            </div>
+            <div className="flex items-center space-x-4 sm:space-x-6 flex-wrap justify-center">
+              <Link href="/#services" className="text-gray-600 hover:text-blue-600 transition-colors text-sm sm:text-base">
+                Services
+              </Link>
+              <Link href="/#about" className="text-gray-600 hover:text-blue-600 transition-colors text-sm sm:text-base">
+                About
+              </Link>
+              <Link href="/#gallery" className="text-gray-600 hover:text-blue-600 transition-colors text-sm sm:text-base">
+                Gallery
+              </Link>
+              <Link href="/#contact" className="text-gray-600 hover:text-blue-600 transition-colors text-sm sm:text-base">
+                Contact
+              </Link>
+            </div>
+          </div>
+        </div>
+      </nav>
 
       <div className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
