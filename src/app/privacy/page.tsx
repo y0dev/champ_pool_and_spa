@@ -1,9 +1,37 @@
-import { BUSINESS_INFO } from '@/utils/constants';
+import { BUSINESS_INFO, CONTACT_INFO } from '@/utils/constants';
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-gray-50 py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50">
+      {/* Navigation Bar */}
+      <nav className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center space-x-8">
+              <a href="/" className="text-xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                ← Back to Home
+              </a>
+            </div>
+            <div className="flex items-center space-x-6">
+              <a href="/#services" className="text-gray-600 hover:text-blue-600 transition-colors">
+                Services
+              </a>
+              <a href="/#about" className="text-gray-600 hover:text-blue-600 transition-colors">
+                About
+              </a>
+              <a href="/#gallery" className="text-gray-600 hover:text-blue-600 transition-colors">
+                Gallery
+              </a>
+              <a href="/#contact" className="text-gray-600 hover:text-blue-600 transition-colors">
+                Contact
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-6">Privacy Policy</h1>
           
@@ -77,8 +105,8 @@ export default function PrivacyPolicy() {
             <div className="bg-gray-50 p-4 rounded-lg">
               <p className="text-gray-700">
                 <strong>{BUSINESS_INFO.name}</strong><br />
-                Email: {BUSINESS_INFO.email}<br />
-                Phone: {BUSINESS_INFO.phone}
+                Email: {CONTACT_INFO.email}<br />
+                Phone: {CONTACT_INFO.phone}
               </p>
             </div>
 
