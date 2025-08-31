@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import About from '@/components/About';
@@ -7,6 +10,8 @@ import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 
 export default function Home() {
+  const [selectedService, setSelectedService] = useState('');
+
   return (
     <>
       <section id="home">
@@ -22,13 +27,13 @@ export default function Home() {
         <ServiceAreas />
       </section>
       <section id="gallery">
-        <Gallery />
+        <Gallery onServiceSelect={setSelectedService} />
       </section>
       <section id="reviews">
         <Testimonials />
       </section>
       <section id="contact">
-        <Contact />
+        <Contact selectedService={selectedService} />
       </section>
     </>
   );

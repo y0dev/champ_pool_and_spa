@@ -4,11 +4,15 @@ import { useState } from 'react';
 
 import { GALLERY_PROJECTS, GALLERY_CATEGORIES } from '@/utils/constants';
 
+interface GalleryProps {
+  onServiceSelect: (service: string) => void;
+}
+
 const projects = GALLERY_PROJECTS;
 
 const categories = ["All", ...Object.keys(GALLERY_CATEGORIES)];
 
-export default function Gallery() {
+export default function Gallery({ onServiceSelect }: GalleryProps) {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
@@ -153,6 +157,15 @@ export default function Gallery() {
               <div className="flex gap-4">
                 <button 
                   onClick={() => {
+                    // Map gallery category to contact form service
+                    let serviceValue = '';
+                    if (selectedProject.category === 'Maintenance') {
+                      serviceValue = 'pool-maintenance';
+                    } else if (selectedProject.category === 'Repair') {
+                      serviceValue = 'pool-repairs';
+                    }
+                    
+                    onServiceSelect(serviceValue);
                     setSelectedProject(null);
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }}
