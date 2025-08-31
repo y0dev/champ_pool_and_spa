@@ -161,46 +161,112 @@ export const SERVICE_AREA_DETAILS = {
 // City Images for Service Areas
 export const CITY_IMAGES = {
   Dallas: {
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&h=300&fit=crop&crop=center",
+    image: "/images/cities/dallas.jpg",
     alt: "Dallas skyline with modern buildings and cityscape",
     description: "The vibrant heart of North Texas"
   },
   McKinney: {
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&crop=center",
+    image: "/images/cities/mckinney.jpg",
     alt: "McKinney historic downtown with charming architecture",
     description: "Historic charm meets modern living"
   },
   Frisco: {
-    image: "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=400&h=300&fit=crop&crop=center",
+    image: "/images/cities/frisco.jpg",
     alt: "Frisco modern suburban development and shopping",
     description: "Fastest growing city in America"
   },
   Prosper: {
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop&crop=center",
+    image: "/images/cities/prosper.jpg",
     alt: "Prosper suburban neighborhood with modern homes",
     description: "Family-friendly suburban community"
   },
   Allen: {
-    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop&crop=center",
+    image: "/images/cities/allen.png",
     alt: "Allen residential area with beautiful homes and landscaping",
     description: "Premier residential destination"
   },
   Plano: {
-    image: "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=400&h=300&fit=crop&crop=center",
+    image: "/images/cities/plano.jpg",
     alt: "Plano corporate headquarters and business district",
     description: "Corporate headquarters capital"
   },
   Fairview: {
-    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop&crop=center",
+    image: "/images/cities/fairview.jpg",
     alt: "Fairview residential community with modern homes",
     description: "Peaceful suburban living"
   },
   Addison: {
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&crop=center",
+    image: "/images/cities/addison.jpg",
     alt: "Addison business district and entertainment area",
     description: "Business and entertainment hub"
   }
 };
+
+// Gallery Categories
+export const GALLERY_CATEGORIES = {
+  Maintenance: {
+    name: "Maintenance",
+    description: "Regular pool maintenance and upkeep services",
+    color: "blue"
+  },
+  Repair: {
+    name: "Repair",
+    description: "Pool equipment repair and troubleshooting",
+    color: "red"
+  }
+};
+
+// Gallery Projects
+export const GALLERY_PROJECTS = [
+  {
+    id: 1,
+    title: "Residential Pool Maintenance",
+    category: "Maintenance",
+    description: "Regular maintenance service for a family pool, including cleaning, chemical balancing, and equipment checks.",
+    image: "/images/gallery/residential-maintenance.jpg",
+    beforeAfter: false
+  },
+  {
+    id: 2,
+    title: "Commercial Pool Maintenance",
+    category: "Maintenance",
+    description: "Ongoing maintenance for a community pool with multiple users, ensuring safety and cleanliness.",
+    image: "/images/gallery/commercial-maintenance.jpg",
+    beforeAfter: false
+  },
+  {
+    id: 3,
+    title: "Pool Pump Repair",
+    category: "Repair",
+    description: "Quick diagnosis and repair of a malfunctioning pool pump, restoring proper water circulation.",
+    image: "/images/gallery/pool-pump-repair.jpg",
+    beforeAfter: false
+  },
+  {
+    id: 4,
+    title: "Pool Filter System Repair",
+    category: "Repair",
+    description: "Repair and maintenance of pool filtration system to ensure crystal clear water quality.",
+    image: "/images/gallery/filter-repair.jpg",
+    beforeAfter: false
+  },
+  {
+    id: 5,
+    title: "Pool Leak Detection & Repair",
+    category: "Repair",
+    description: "Professional leak detection and repair service to prevent water loss and structural damage.",
+    image: "/images/gallery/leak-detection.jpg",
+    beforeAfter: false
+  },
+  {
+    id: 6,
+    title: "Pool Equipment Maintenance",
+    category: "Maintenance",
+    description: "Comprehensive maintenance of pool equipment including pumps, filters, heaters, and automation systems.",
+    image: "/images/gallery/equipment-maintenance.jpg",
+    beforeAfter: false
+  }
+];
 
 // Web3Forms Configuration
 export const WEB3FORMS_CONFIG = {

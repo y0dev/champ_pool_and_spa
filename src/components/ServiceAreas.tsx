@@ -20,9 +20,6 @@ export default function ServiceAreas() {
             <h3 className="text-2xl font-semibold text-gray-900 mb-2">
               {CONTACT_INFO.serviceArea}
             </h3>
-            <p className="text-gray-600">
-              Professional pool services available in these locations
-            </p>
           </div>
 
           {/* Cities Grid */}
@@ -50,18 +47,6 @@ export default function ServiceAreas() {
                         {cityData.description}
                       </p>
                     </div>
-                  </div>
-                  
-                  {/* City Info */}
-                  <div className="p-4">
-                    <div className="flex items-center justify-center space-x-2 mb-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                      <span className="text-blue-600 font-medium text-sm">Pool Maintenance & Repair</span>
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    </div>
-                    <p className="text-gray-600 text-center text-sm">
-                      Professional pool services available
-                    </p>
                   </div>
                 </div>
               );

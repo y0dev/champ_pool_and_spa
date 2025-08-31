@@ -2,58 +2,11 @@
 
 import { useState } from 'react';
 
-const projects = [
-  {
-    id: 1,
-    title: "Residential Pool Maintenance",
-    category: "Maintenance",
-    description: "Regular maintenance service for a family pool, including cleaning, chemical balancing, and equipment checks.",
-    image: "/api/placeholder/400/300",
-    beforeAfter: false
-  },
-  {
-    id: 2,
-    title: "Commercial Pool Maintenance",
-    category: "Maintenance",
-    description: "Ongoing maintenance for a community pool with multiple users, ensuring safety and cleanliness.",
-    image: "/api/placeholder/400/300",
-    beforeAfter: false
-  },
-  {
-    id: 3,
-    title: "Pool Pump Repair",
-    category: "Repair",
-    description: "Quick diagnosis and repair of a malfunctioning pool pump, restoring proper water circulation.",
-    image: "/api/placeholder/400/300",
-    beforeAfter: true
-  },
-  {
-    id: 4,
-    title: "Pool Filter System Repair",
-    category: "Repair",
-    description: "Repair and maintenance of pool filtration system to ensure crystal clear water quality.",
-    image: "/api/placeholder/400/300",
-    beforeAfter: true
-  },
-  {
-    id: 5,
-    title: "Pool Leak Detection & Repair",
-    category: "Repair",
-    description: "Professional leak detection and repair service to prevent water loss and structural damage.",
-    image: "/api/placeholder/400/300",
-    beforeAfter: true
-  },
-  {
-    id: 6,
-    title: "Pool Equipment Maintenance",
-    category: "Maintenance",
-    description: "Comprehensive maintenance of pool equipment including pumps, filters, heaters, and automation systems.",
-    image: "/api/placeholder/400/300",
-    beforeAfter: false
-  }
-];
+import { GALLERY_PROJECTS, GALLERY_CATEGORIES } from '@/utils/constants';
 
-const categories = ["All", "Maintenance", "Repair"];
+const projects = GALLERY_PROJECTS;
+
+const categories = ["All", ...Object.keys(GALLERY_CATEGORIES)];
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState("All");
