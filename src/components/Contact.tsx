@@ -83,7 +83,7 @@ export default function Contact({ selectedService = '' }: ContactProps) {
             Get In Touch
           </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to experience the Champion difference? Get in touch with Julio for a free quote and let us take care of your pool maintenance needs.
+              Ready to experience the Champion difference? Get in touch with us for a free quote and let us take care of your pool maintenance needs.
             </p>
         </div>
 

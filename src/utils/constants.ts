@@ -251,6 +251,38 @@ export const GALLERY_PROJECTS = [
   // }
 ];
 
+// Testimonials
+export const TESTIMONIALS = [
+  {
+    name: "Sarah Johnson",
+    role: "Pool Owner",
+    content: "Champion Pool & Spa transformed our neglected pool into a sparkling oasis. Their attention to detail and professional service exceeded our expectations. Highly recommend!",
+    rating: 5,
+    image: "/api/placeholder/60/60"
+  },
+  {
+    name: "Mike Rodriguez",
+    role: "Property Manager",
+    content: "We've been using Champion for our apartment complex pools for over 3 years. Reliable, professional, and they always go above and beyond. Our residents love the clean pools!",
+    rating: 5,
+    image: "/api/placeholder/60/60"
+  },
+  {
+    name: "Jennifer Chen",
+    role: "Spa Owner",
+    content: "The spa installation was flawless and completed ahead of schedule. The team was professional, clean, and left our property spotless. Couldn't be happier!",
+    rating: 5,
+    image: "/api/placeholder/60/60"
+  },
+  {
+    name: "David Thompson",
+    role: "Homeowner",
+    content: "When our pool pump failed on a holiday weekend, Champion was there within hours. Their emergency service saved our summer plans. Truly exceptional customer service!",
+    rating: 5,
+    image: "/api/placeholder/60/60"
+  }
+];
+
 // Web3Forms Configuration
 export const WEB3FORMS_CONFIG = {
   accessKey: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || 'YOUR_WEB3FORMS_ACCESS_KEY'
