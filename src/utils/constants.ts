@@ -158,6 +158,50 @@ export const SERVICE_AREA_DETAILS = {
   radius: "Metro Area Coverage"
 };
 
+// City Images for Service Areas
+export const CITY_IMAGES = {
+  Dallas: {
+    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&h=300&fit=crop&crop=center",
+    alt: "Dallas skyline with modern buildings and cityscape",
+    description: "The vibrant heart of North Texas"
+  },
+  McKinney: {
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&crop=center",
+    alt: "McKinney historic downtown with charming architecture",
+    description: "Historic charm meets modern living"
+  },
+  Frisco: {
+    image: "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=400&h=300&fit=crop&crop=center",
+    alt: "Frisco modern suburban development and shopping",
+    description: "Fastest growing city in America"
+  },
+  Prosper: {
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop&crop=center",
+    alt: "Prosper suburban neighborhood with modern homes",
+    description: "Family-friendly suburban community"
+  },
+  Allen: {
+    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop&crop=center",
+    alt: "Allen residential area with beautiful homes and landscaping",
+    description: "Premier residential destination"
+  },
+  Plano: {
+    image: "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=400&h=300&fit=crop&crop=center",
+    alt: "Plano corporate headquarters and business district",
+    description: "Corporate headquarters capital"
+  },
+  Fairview: {
+    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop&crop=center",
+    alt: "Fairview residential community with modern homes",
+    description: "Peaceful suburban living"
+  },
+  Addison: {
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&crop=center",
+    alt: "Addison business district and entertainment area",
+    description: "Business and entertainment hub"
+  }
+};
+
 // Web3Forms Configuration
 export const WEB3FORMS_CONFIG = {
   accessKey: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || 'YOUR_WEB3FORMS_ACCESS_KEY'

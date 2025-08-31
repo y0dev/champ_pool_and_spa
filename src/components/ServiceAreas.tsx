@@ -1,4 +1,4 @@
-import { CONTACT_INFO } from '@/utils/constants';
+import { CONTACT_INFO, CITY_IMAGES } from '@/utils/constants';
 
 export default function ServiceAreas() {
   return (
@@ -26,25 +26,46 @@ export default function ServiceAreas() {
           </div>
 
           {/* Cities Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {CONTACT_INFO.serviceAreas.map((city) => (
-              <div 
-                key={city} 
-                className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl hover:from-blue-100 hover:to-blue-200 transition-all duration-300 hover:scale-105"
-              >
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">
-                    {city.charAt(0)}
-                  </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {CONTACT_INFO.serviceAreas.map((city) => {
+              const cityData = CITY_IMAGES[city as keyof typeof CITY_IMAGES];
+              return (
+                <div 
+                  key={city} 
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105"
+                >
+                  {/* City Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={cityData.image} 
+                      alt={cityData.alt}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <h4 className="text-white font-bold text-xl mb-1">
+                        {city}
+                      </h4>
+                      <p className="text-white/90 text-sm">
+                        {cityData.description}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* City Info */}
+                  <div className="p-4">
+                    <div className="flex items-center justify-center space-x-2 mb-3">
+                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                      <span className="text-blue-600 font-medium text-sm">Pool Maintenance & Repair</span>
+                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    </div>
+                    <p className="text-gray-600 text-center text-sm">
+                      Professional pool services available
+                    </p>
+                  </div>
                 </div>
-                <h4 className="font-semibold text-gray-900 text-lg mb-2">
-                  {city}
-                </h4>
-                <p className="text-gray-600 text-sm">
-                  Pool Maintenance & Repair
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
