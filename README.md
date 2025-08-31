@@ -1,35 +1,42 @@
 # Champion Pool & Spa - Business Website
 
-A professional, modern business website for Champion Pool & Spa, built with Next.js and TailwindCSS.
+A professional, modern business website for Champion Pool & Spa, built with Next.js and TailwindCSS. Features a stunning red and blue theme with dynamic hero image transitions and comprehensive pool service information.
 
-## Features
+## ✨ Features
 
-- **Responsive Design**: Mobile-first design that works on all devices
-- **Modern UI/UX**: Clean, professional design with black and blue branding
-- **SEO Optimized**: Meta tags, structured data, and best practices
-- **Fast Performance**: Built with Next.js for optimal performance
-- **Contact Forms**: Integrated contact and quote request forms
-- **Gallery**: Portfolio showcase with project filtering
-- **Testimonials**: Customer reviews and ratings
-- **Services**: Comprehensive service listings with pricing
+- **🎨 Red & Blue Theme**: Professional gradient styling throughout
+- **🖼️ Hero Image Transitions**: Automatic fade in/out between pool images
+- **📱 Responsive Design**: Mobile-first design that works on all devices
+- **⚡ Modern UI/UX**: Clean, professional design with smooth animations
+- **🔍 SEO Optimized**: Meta tags, structured data, and best practices
+- **🚀 Fast Performance**: Built with Next.js 15 and Turbopack
+- **📝 Contact Forms**: Integrated contact and quote request forms with Web3Forms
+- **🖼️ Gallery**: Portfolio showcase with project filtering
+- **⭐ Testimonials**: Customer reviews and ratings
+- **🛠️ Services**: Comprehensive service listings with pricing
+- **🏆 Trust Indicators**: License, insurance, BBB accreditation display
 
-## Pages
+## 🎯 Pages & Sections
 
-- **Home**: Hero banner, services overview, testimonials
-- **About**: Company background, values, team information
-- **Services**: Detailed service offerings with descriptions
-- **Gallery**: Project portfolio with filtering
-- **Testimonials**: Customer reviews and feedback
-- **Contact**: Contact form and business information
+- **🏠 Home**: Hero banner with image transitions, services overview, testimonials
+- **ℹ️ About**: Company background, values, team information
+- **🛠️ Services**: Detailed service offerings with descriptions
+- **🖼️ Gallery**: Project portfolio with filtering and modal views
+- **⭐ Testimonials**: Customer reviews and feedback
+- **📞 Contact**: Contact form and business information
+- **📄 Privacy Policy**: Legal privacy information
+- **📋 Terms of Service**: Legal terms and conditions
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 - **Frontend**: Next.js 15, React 19, TypeScript
-- **Styling**: TailwindCSS 4
+- **Styling**: TailwindCSS 4 with custom gradients
+- **Fonts**: Dancing Script, Playfair Display, Quicksand
+- **Forms**: Web3Forms integration
 - **Deployment**: Docker, Docker Compose
 - **Build Tool**: Turbopack
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -91,7 +98,7 @@ The contact form uses [Web3Forms](https://web3forms.com/) for form submissions. 
    npm start
    ```
 
-## Docker Deployment
+## 🐳 Docker Deployment
 
 ### Development with Docker
 
@@ -130,30 +137,34 @@ docker build -t champion-pool-spa .
 docker run -p 3000:3000 champion-pool-spa
 ```
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 champs_pool_and_spa/
 ├── src/
 │   ├── app/                 # Next.js app router
-│   │   ├── about/          # About page
-│   │   ├── services/       # Services page
-│   │   ├── gallery/        # Gallery page
-│   │   ├── testimonials/   # Testimonials page
-│   │   ├── contact/        # Contact page
-│   │   ├── layout.tsx      # Root layout
+│   │   ├── privacy/        # Privacy policy page
+│   │   ├── terms/          # Terms of service page
+│   │   ├── layout.tsx      # Root layout with fonts
+│   │   ├── globals.css     # Global styles and fonts
 │   │   └── page.tsx        # Home page
 │   ├── components/         # Reusable components
 │   │   ├── Header.tsx      # Navigation header
 │   │   ├── Footer.tsx      # Site footer
-│   │   ├── Hero.tsx        # Hero section
+│   │   ├── Hero.tsx        # Hero section with image transitions
 │   │   ├── Services.tsx    # Services showcase
 │   │   ├── About.tsx       # About section
-│   │   ├── Gallery.tsx     # Portfolio gallery
+│   │   ├── Gallery.tsx     # Portfolio gallery with modal
 │   │   ├── Testimonials.tsx # Customer reviews
-│   │   └── Contact.tsx     # Contact form
-│   └── app/globals.css     # Global styles
+│   │   ├── Contact.tsx     # Contact form
+│   │   └── ServiceAreas.tsx # Service areas display
+│   └── utils/
+│       └── constants.ts    # Centralized data and configuration
 ├── public/                  # Static assets
+│   ├── images/
+│   │   ├── hero/           # Hero images (pool-1.jpeg, pool-2.png)
+│   │   ├── cities/         # City images for service areas
+│   │   └── gallery/        # Gallery project images
 ├── Dockerfile              # Docker configuration
 ├── docker-compose.yml      # Docker Compose setup
 ├── next.config.ts          # Next.js configuration
@@ -161,32 +172,43 @@ champs_pool_and_spa/
 └── README.md               # This file
 ```
 
-## Customization
+## 🎨 Customization
 
 ### Branding Colors
 
-The website uses a black and blue color scheme. To customize:
+The website uses a professional red and blue gradient theme:
 
 1. **Primary Blue**: `#3b82f6` (blue-600)
-2. **Dark Blue**: `#1e40af` (blue-700)
-3. **Navy Blue**: `#1e3a8a` (blue-800)
-4. **Black**: `#111827` (gray-900)
+2. **Primary Red**: `#dc2626` (red-600)
+3. **Gradients**: `from-blue-600 to-red-600`
+4. **Dark Blue**: `#1e40af` (blue-700)
+5. **Dark Red**: `#b91c1c` (red-700)
 
 ### Content Updates
 
-- **Company Information**: Update contact details in `src/components/Contact.tsx`
-- **Services**: Modify service offerings in `src/components/Services.tsx`
-- **About Content**: Edit company story in `src/components/About.tsx`
-- **Testimonials**: Update customer reviews in `src/components/Testimonials.tsx`
+- **Company Information**: Update contact details in `src/utils/constants.ts`
+- **Services**: Modify service offerings in `src/utils/constants.ts`
+- **About Content**: Edit company story in `src/utils/constants.ts`
+- **Testimonials**: Update customer reviews in `src/utils/constants.ts`
+- **Gallery**: Add project images and descriptions in `src/utils/constants.ts`
 
 ### Images
 
 Replace placeholder images with actual project photos:
-- Update image paths in components
-- Add images to the `public/` directory
+- **Hero Images**: Add to `public/images/hero/`
+- **Gallery Images**: Add to `public/images/gallery/`
+- **City Images**: Add to `public/images/cities/`
+- Update image paths in `src/utils/constants.ts`
 - Optimize images for web use
 
-## SEO Features
+### Fonts
+
+The website uses three custom fonts:
+- **Dancing Script**: For elegant headings
+- **Playfair Display**: For display text
+- **Quicksand**: For body text
+
+## 🔍 SEO Features
 
 - Meta tags for all pages
 - Open Graph tags for social sharing
@@ -194,31 +216,35 @@ Replace placeholder images with actual project photos:
 - Semantic HTML structure
 - Fast loading times
 - Mobile-friendly design
+- Optimized images and fonts
 
-## Performance
+## ⚡ Performance
 
-- Next.js optimization
+- Next.js 15 optimization
+- Turbopack for faster builds
 - TailwindCSS for minimal CSS
 - Image optimization
 - Code splitting
 - Lazy loading components
+- Font optimization with `display: swap`
 
-## Browser Support
+## 🌐 Browser Support
 
 - Chrome (latest)
 - Firefox (latest)
 - Safari (latest)
 - Edge (latest)
-- Mobile browsers
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
-## License
+## 📄 License
 
 This project is proprietary to Champion Pool & Spa.
 
-## Support
+## 🆘 Support
 
 For technical support or questions about the website, please contact the development team.
 
 ---
 
-**Champion Pool & Spa** - Professional Pool & Spa Services
+**Champion Pool & Spa** - Professional Pool & Spa Services  
+*Serving the Dallas-Fort Worth Metro Area*
