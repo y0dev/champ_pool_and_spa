@@ -181,10 +181,10 @@ export default function Contact({ selectedService = '' }: ContactProps) {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full font-semibold py-3 px-6 rounded-lg transition-colors ${
+                className={`w-full font-semibold py-3 px-6 rounded-lg transition-all duration-300 ${
                   isSubmitting 
                     ? 'bg-gray-400 cursor-not-allowed' 
-                    : 'bg-blue-600 hover:bg-blue-700 text-white'
+                    : 'bg-gradient-to-r from-blue-600 to-red-600 hover:from-blue-700 hover:to-red-700 text-white shadow-lg hover:shadow-xl hover:scale-105 transform'
                 }`}
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}

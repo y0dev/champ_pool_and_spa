@@ -113,7 +113,7 @@ export default function Header() {
                   <a 
                     key={link.name}
                     href={link.href} 
-                    className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium"
+                    className="block px-3 py-2 text-gray-700 hover:text-red-600 font-medium"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.name}
@@ -123,7 +123,7 @@ export default function Header() {
               <div className="pt-4">
                 <a 
                   href="#contact" 
-                  className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+                  className="block w-full text-center bg-gradient-to-r from-blue-600 to-red-600 hover:from-blue-700 hover:to-red-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Free Quote

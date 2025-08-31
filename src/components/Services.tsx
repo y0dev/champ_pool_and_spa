@@ -27,7 +27,7 @@ const getServiceIcon = (iconType: string) => {
 
 export default function Services() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -41,7 +41,7 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {SERVICES.map((service, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+            <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border-l-4 border-gradient-to-b from-blue-600 to-red-600">
               <div className="text-blue-600 mb-4">
                 {getServiceIcon(service.icon)}
               </div>
@@ -55,7 +55,7 @@ export default function Services() {
                 <span className="text-blue-600 font-semibold">{service.price}</span>
                 <a 
                   href="#contact" 
-                  className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                  className="text-blue-600 hover:text-red-600 font-medium transition-colors"
                 >
                   Learn More →
                 </a>
@@ -67,7 +67,7 @@ export default function Services() {
         <div className="text-center mt-12">
           <a 
             href="#contact" 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
+            className="bg-gradient-to-r from-blue-600 to-red-600 hover:from-blue-700 hover:to-red-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
           >
             Get Custom Quote
           </a>

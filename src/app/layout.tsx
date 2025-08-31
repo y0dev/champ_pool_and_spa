@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Dancing_Script, Playfair_Display, Quicksand } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SEO_METADATA } from "@/utils/constants";
 
-const inter = Inter({
-  variable: "--font-inter",
+const dancingScript = Dancing_Script({
+  variable: "--font-dancing",
   subsets: ["latin"],
   display: "swap",
 });
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const quicksand = Quicksand({
+  variable: "--font-quicksand",
   subsets: ["latin"],
   display: "swap",
 });
@@ -32,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${playfairDisplay.variable} antialiased`}
+        className={`${dancingScript.variable} ${playfairDisplay.variable} ${quicksand.variable} antialiased`}
       >
         <Header />
         <main className="min-h-screen">
