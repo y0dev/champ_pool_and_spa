@@ -43,7 +43,7 @@ export default function Contact({ selectedService = '' }: ContactProps) {
         body: JSON.stringify({
           access_key: WEB3FORMS_CONFIG.accessKey,
           ...formData,
-          subject: `New Contact Form Submission - ${formData.service || 'General Inquiry'}`,
+          subject: `New Contact Form Submission - ${formData.service ? formData.service.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') : 'General Inquiry'}`,
         }),
       });
 
