@@ -1,35 +1,9 @@
 import { BUSINESS_INFO, CONTACT_INFO } from '@/utils/constants';
-import Link from 'next/link';
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation Bar */}
-      <nav className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-8">
-              <Link href="/" className="text-xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
-                ← Back to Home
-              </Link>
-            </div>
-            <div className="flex items-center space-x-6">
-              <Link href="/#services" className="text-gray-600 hover:text-blue-600 transition-colors">
-                Services
-              </Link>
-              <Link href="/#about" className="text-gray-600 hover:text-blue-600 transition-colors">
-                About
-              </Link>
-              <Link href="/#gallery" className="text-gray-600 hover:text-blue-600 transition-colors">
-                Gallery
-              </Link>
-              <Link href="/#contact" className="text-gray-600 hover:text-blue-600 transition-colors">
-                Contact
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+
 
       <div className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
