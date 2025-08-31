@@ -220,11 +220,6 @@ export const GALLERY_CATEGORIES = {
     name: "Repair",
     description: "Pool equipment repair and troubleshooting",
     color: "red"
-  },
-  Cleaning: {
-    name: "Cleaning",
-    description: "Pool cleaning and water treatment services",
-    color: "green"
   }
 };
 
@@ -233,51 +228,36 @@ export const GALLERY_PROJECTS = [
   {
     id: 1,
     title: "Weekly Cleaning",
-    category: "Cleaning",
-    description: "Complete skimming, vacuuming, and brushing to keep your pool sparkling clean. Our comprehensive weekly cleaning service ensures your pool maintains crystal clear water and optimal hygiene for your family's enjoyment.",
-    image: "/images/gallery/weekly-cleaning.jpg",
+    category: "Maintenance",
+    description: "Complete skimming, vacuuming, and brushing to keep your pool sparkling clean. Professional weekly maintenance service for both residential and commercial pools.",
+    image: "/images/gallery/pool-maintenance.jpg",
     beforeAfter: false
   },
   {
     id: 2,
     title: "Equipment Repairs",
     category: "Repair",
-    description: "Pump, filter, heater, and timer repairs to keep your system running smoothly. Our expert technicians diagnose and fix equipment issues quickly to minimize downtime and prevent costly damage.",
-    image: "/images/gallery/equipment-repairs.jpg",
+    description: "Pump, filter, heater, and timer repairs to keep your system running smoothly. Expert repair services for all pool equipment with quick, reliable turnaround.",
+    image: "/images/gallery/pool-repair.jpg",
     beforeAfter: false
   },
   {
     id: 3,
     title: "Filter Cleaning",
     category: "Maintenance",
-    description: "Clean and maintain filters for optimal water circulation. Regular filter maintenance is essential for keeping your pool water clean and your equipment running efficiently.",
-    image: "/images/gallery/filter-cleaning.jpg",
+    description: "Clean and maintain filters for optimal water circulation. Professional filter cleaning and maintenance services to ensure your pool water stays crystal clear.",
+    image: "/images/gallery/leak-detection.jpg",
     beforeAfter: false
   },
   {
     id: 4,
     title: "Green to Clean",
-    category: "Cleaning",
-    description: "Transform algae-filled green pools back to crystal clear condition. Our specialized treatment process eliminates algae and restores your pool to pristine condition quickly and safely.",
+    category: "Maintenance",
+    description: "Transform algae-filled green pools back to crystal clear condition. Emergency pool recovery services using advanced treatment methods and professional expertise.",
     image: "/images/gallery/green-to-clean.jpg",
     beforeAfter: true
   }
 ];
-
-// Pool Tips Section
-export const POOL_TIPS = {
-  title: "Weekly Pool Benefits",
-  description: "Regular pool maintenance provides numerous benefits for your family and investment",
-  benefits: [
-    "Maintains safe and healthy water for your family",
-    "Extends your pool's life and equipment",
-    "Saves you time and hassle every week",
-    "Pool is always guest-ready and inviting",
-    "Prevents costly pool surface and equipment repairs"
-  ],
-  image: "/images/gallery/pool-maintenance-benefits.jpg",
-  imageAlt: "Professional pool maintenance technician cleaning a swimming pool"
-};
 
 // Testimonials
 export const TESTIMONIALS = [
