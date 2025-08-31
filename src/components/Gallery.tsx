@@ -77,7 +77,10 @@ export default function Gallery() {
                 <p className="text-gray-600 mb-4">
                   {project.description}
                 </p>
-                <button className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
+                <button 
+                  onClick={() => setSelectedProject(project)}
+                  className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                >
                   View Details →
                 </button>
               </div>
@@ -148,9 +151,15 @@ export default function Gallery() {
               </p>
               
               <div className="flex gap-4">
-                <a href="#contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                <button 
+                  onClick={() => {
+                    setSelectedProject(null);
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+                >
                   Get Quote for Similar Service
-                </a>
+                </button>
                 <button 
                   onClick={() => setSelectedProject(null)}
                   className="border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-2 rounded-lg font-medium transition-colors"
