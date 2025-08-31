@@ -82,9 +82,8 @@ export default function Contact({ selectedService = '' }: ContactProps) {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Get In Touch
           </h2>
-                      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to transform your pool or spa? Contact us today for a free consultation 
-              and quote. We&apos;re here to help make your aquatic dreams a reality.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Ready to experience the Champion difference? Get in touch with Julio for a free quote and let us take care of your pool maintenance needs.
             </p>
         </div>
 
