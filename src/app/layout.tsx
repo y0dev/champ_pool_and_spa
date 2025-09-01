@@ -3,6 +3,7 @@ import { Dancing_Script, Playfair_Display, Quicksand } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import StructuredData from "@/components/StructuredData";
 import { SEO_METADATA } from "@/utils/constants";
 
 const dancingScript = Dancing_Script({
@@ -37,11 +38,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#1e40af" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Champion Pool" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-TileColor" content="#1e40af" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        <StructuredData />
+      </head>
       <body
         className={`${dancingScript.variable} ${playfairDisplay.variable} ${quicksand.variable} antialiased`}
       >
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <Header />
-        <main className="min-h-screen">
+        <main id="main-content" className="min-h-screen">
           {children}
         </main>
         <Footer />

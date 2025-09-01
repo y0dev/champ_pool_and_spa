@@ -116,17 +116,59 @@ export const SOCIAL_LINKS = [
 
 // SEO Metadata
 export const SEO_METADATA = {
-  title: "Champion Pool and Spa - Professional Pool & Spa Services",
-  description: "Expert pool maintenance and repair services. Serving the Dallas-Fort Worth Metro Area with quality pool and spa solutions. Get your free quote today!",
-  keywords: "pool maintenance, pool repair, pool services, Dallas, McKinney, Frisco, Prosper, Allen, Plano, Fairview, Addison",
+  title: "Champion Pool and Spa - Professional Pool & Spa Services | Dallas-Fort Worth",
+  description: "Expert pool maintenance, repair, and cleaning services in Dallas-Fort Worth Metro Area. Weekly cleaning, equipment repairs, filter cleaning, and green-to-clean services. Get your free quote today!",
+  keywords: "pool maintenance, pool repair, pool cleaning, pool services, Dallas, McKinney, Frisco, Prosper, Allen, Plano, Fairview, Addison, pool equipment repair, filter cleaning, green pool treatment, weekly pool service",
   authors: [{ name: "Champion Pool and Spa" }],
+  creator: "Champion Pool and Spa",
+  publisher: "Champion Pool and Spa",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://championpoolandspa.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: "Champion Pool and Spa - Professional Pool & Spa Services",
-    description: "Expert pool maintenance and repair services. Get your free quote today!",
-    type: "website",
+    description: "Expert pool maintenance and repair services in Dallas-Fort Worth. Weekly cleaning, equipment repairs, and emergency pool recovery. Get your free quote today!",
+    url: 'https://championpoolandspa.com',
+    siteName: 'Champion Pool and Spa',
+    images: [
+      {
+        url: '/images/hero/pool-1.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Champion Pool and Spa - Professional Pool Services',
+      },
+    ],
     locale: "en_US",
+    type: "website",
   },
-  robots: "index, follow",
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Champion Pool and Spa - Professional Pool & Spa Services',
+    description: 'Expert pool maintenance and repair services in Dallas-Fort Worth Metro Area',
+    images: ['/images/hero/pool-1.jpeg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large' as const,
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+    yahoo: 'your-yahoo-verification-code',
+  },
 };
 
 // Colors
