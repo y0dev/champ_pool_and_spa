@@ -36,7 +36,10 @@ export default function StructuredData() {
           },
           "geoRadius": "50 miles"
         },
-        "openingHours": BUSINESS_INFO.businessHours,
+        "openingHours": [
+          "Mo-Fr 08:00-19:00",
+          "Sa 08:00-14:00"
+        ],
         "priceRange": "$$",
         "paymentAccepted": ["Cash", "Credit Card", "Check"],
         "currenciesAccepted": "USD",

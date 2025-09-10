@@ -190,8 +190,8 @@ export const SOCIAL_LINKS = [
 // SEO Metadata
 export const SEO_METADATA = {
   title: "Champion Pool and Spa - Professional Pool & Spa Services | Dallas-Fort Worth",
-  description: "Expert pool maintenance, repair, and cleaning services in Dallas-Fort Worth Metro Area. Weekly cleaning, equipment repairs, filter cleaning, and green-to-clean services. Get your free quote today!",
-  keywords: "pool maintenance, pool repair, pool cleaning, pool services, Dallas, McKinney, Frisco, Prosper, Allen, Plano, Fairview, Addison, pool equipment repair, filter cleaning, green pool treatment, weekly pool service",
+  description: "Expert pool cleaning and repair services in Dallas-Fort Worth Metro Area. Professional weekly cleaning, equipment repairs, filter cleaning, and green-to-clean services. Get your free quote today!",
+  keywords: "pool cleaning, pool repair, pool maintenance, pool services, Dallas, McKinney, Frisco, Prosper, Allen, Plano, Fairview, Addison, Flower Mound, Carrollton, Coppell, Lewisville, pool equipment repair, filter cleaning, green pool treatment, weekly pool service, Julio pool services",
   authors: [{ name: "Champion Pool and Spa" }],
   creator: "Champion Pool and Spa",
   publisher: "Champion Pool and Spa",
@@ -206,7 +206,7 @@ export const SEO_METADATA = {
   },
   openGraph: {
     title: "Champion Pool and Spa - Professional Pool & Spa Services",
-    description: "Expert pool maintenance and repair services in Dallas-Fort Worth. Weekly cleaning, equipment repairs, and emergency pool recovery. Get your free quote today!",
+    description: "Expert pool cleaning and repair services in Dallas-Fort Worth. Professional weekly cleaning, equipment repairs, and emergency pool recovery. Get your free quote today!",
     url: 'https://championpoolandspa.com',
     siteName: 'Champion Pool and Spa',
     images: [
@@ -223,7 +223,7 @@ export const SEO_METADATA = {
   twitter: {
     card: 'summary_large_image',
     title: 'Champion Pool and Spa - Professional Pool & Spa Services',
-    description: 'Expert pool maintenance and repair services in Dallas-Fort Worth Metro Area',
+    description: 'Expert pool cleaning and repair services in Dallas-Fort Worth Metro Area',
     images: ['/images/hero/pool-1.jpeg'],
   },
   robots: {
