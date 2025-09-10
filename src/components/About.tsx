@@ -93,7 +93,10 @@ export default function About() {
                   <div className="text-gray-600 text-sm">Satisfaction Rate</div>
                 </div>
                 <div className="text-center bg-blue-50 rounded-lg p-4">
-                  <div className="text-lg font-bold text-blue-600 mb-2 leading-tight">{BUSINESS_INFO.businessHours.display}</div>
+                  <div className="text-xs md:text-sm font-bold text-blue-600 mb-2 leading-tight">
+                    M-F: {BUSINESS_INFO.businessHours.weekdays}<br />
+                    Sat: {BUSINESS_INFO.businessHours.saturday}
+                  </div>
                   <div className="text-gray-600 text-sm">Service Hours</div>
                 </div>
               </div>
