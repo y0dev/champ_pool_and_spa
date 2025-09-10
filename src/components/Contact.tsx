@@ -130,12 +130,13 @@ export default function Contact({ selectedService = '' }: ContactProps) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number
+                    Phone Number *
                   </label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
+                    required
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500 bg-white"
@@ -155,7 +156,7 @@ export default function Contact({ selectedService = '' }: ContactProps) {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 bg-white"
                   >
                     <option value="" className="text-gray-500">Select a service</option>
-                    <option value="pool-maintenance" className="text-gray-900">Pool Maintenance</option>
+                    <option value="pool-cleaning" className="text-gray-900">Pool Cleaning</option>
                     <option value="pool-repairs" className="text-gray-900">Pool Repairs</option>
                     <option value="general-inquiry" className="text-gray-900">General Inquiry</option>
                   </select>

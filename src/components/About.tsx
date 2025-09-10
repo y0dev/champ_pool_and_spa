@@ -1,4 +1,4 @@
-import { BUSINESS_INFO } from '@/utils/constants';
+import { BUSINESS_INFO, CONTACT_INFO } from '@/utils/constants';
 
 export default function About() {
   return (
@@ -10,14 +10,8 @@ export default function About() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               About Julio
             </h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Hi, I&apos;m Julio, the owner and founder of Champion Pool & Spa. I started this business with a simple mission: to provide honest, reliable pool maintenance and repair services to families and businesses in the Dallas-Fort Worth area.
-            </p>
-            <p className="text-lg text-gray-600 mb-6">
-              With over 5 years of experience in the pool industry, I&apos;ve learned that success comes from treating every customer like family. I believe in doing the job right the first time, being transparent about pricing, and always being there when you need us.
-            </p>
             <p className="text-lg text-gray-600 mb-8">
-              When I&apos;m not working on pools, you&apos;ll find me spending time with my family or enjoying the outdoors. I understand how important a well-maintained pool is to your home and lifestyle, which is why I take such pride in every job we complete.
+              {BUSINESS_INFO.aboutDescription}
             </p>
 
             {/* Values */}
@@ -79,22 +73,29 @@ export default function About() {
           {/* Stats and Certifications */}
           <div className="space-y-8">
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="text-center bg-blue-50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-blue-600 mb-2">{BUSINESS_INFO.yearsExperience}</div>
-                <div className="text-gray-600 text-sm">Years Experience</div>
+            <div className="space-y-4">
+              {/* Top Row - Main Stats */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center bg-blue-50 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-blue-600 mb-2">{BUSINESS_INFO.yearsExperience}</div>
+                  <div className="text-gray-600 text-sm">Years Experience</div>
+                </div>
+                <div className="text-center bg-blue-50 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-blue-600 mb-2">{BUSINESS_INFO.customers}</div>
+                  <div className="text-gray-600 text-sm">Happy Customers</div>
+                </div>
               </div>
-              <div className="text-center bg-blue-50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-blue-600 mb-2">{BUSINESS_INFO.customers}</div>
-                <div className="text-gray-600 text-sm">Happy Customers</div>
-              </div>
-              <div className="text-center bg-blue-50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-blue-600 mb-2">{BUSINESS_INFO.businessHours}</div>
-                <div className="text-gray-600 text-sm">Service Hours</div>
-              </div>
-              <div className="text-center bg-blue-50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-blue-600 mb-2">{BUSINESS_INFO.satisfactionRate}</div>
-                <div className="text-gray-600 text-sm">Satisfaction Rate</div>
+              
+              {/* Bottom Row - Additional Stats */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center bg-blue-50 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-blue-600 mb-2">{BUSINESS_INFO.satisfactionRate}</div>
+                  <div className="text-gray-600 text-sm">Satisfaction Rate</div>
+                </div>
+                <div className="text-center bg-blue-50 rounded-lg p-4">
+                  <div className="text-lg font-bold text-blue-600 mb-2 leading-tight">{BUSINESS_INFO.businessHours.display}</div>
+                  <div className="text-gray-600 text-sm">Service Hours</div>
+                </div>
               </div>
             </div>
 

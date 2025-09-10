@@ -2,13 +2,19 @@
 export const BUSINESS_INFO = {
   name: "Champion Pool & Spa",
   phone: "(972) 765-6162",
+  email: "service@championpoolandspa.com",
   tagline: "Professional pool and spa services serving the Dallas-Fort Worth Metro Area",
   yearsExperience: "5+",
   customers: "100+",
   satisfactionRate: "100%",
-  businessHours: "Daily",
+  businessHours: {
+    weekdays: "8:00 AM - 7:00 PM",
+    saturday: "8:00 AM - 2:00 PM",
+    emergency: false,
+    display: "M-F 8AM-7PM, Sat 8AM-2PM"
+  },
   description: "Experience the difference that 5+ years of expertise makes.",
-  aboutDescription: "For over 5 years, Champion Pool & Spa has been the trusted name in professional pool and spa services throughout the Dallas-Fort Worth Metro Area. What started as a small family business has grown into a comprehensive service provider, serving hundreds of satisfied customers across Dallas, McKinney, Frisco, Prosper, Allen, Plano, Fairview, and Addison.",
+  aboutDescription: "With Julio having a growing family, he knows the importance of family fun time and safety. That is why he is passionate for providing quality work to all of his clients. Julio has built Champion Pool and Spa on integrity, honesty, and consistency. When you choose Champion Pool & Spa, you're partnering with a trusted professional who treats your pool like his own.",
   mission: "We are committed to providing exceptional pool and spa services that exceed our customers' expectations. Our dedication to quality, reliability, and customer satisfaction has made us a trusted name in the Dallas-Fort Worth Metro Area.",
   values: [
     "Quality Service",
@@ -25,37 +31,107 @@ export const BUSINESS_INFO = {
   }
 };
 
+
+// Service Area Details
+export const SERVICE_AREA_DETAILS = {
+  primary: "Dallas-Fort Worth Metro Area",
+  cities: [
+    {
+      name: "Dallas",
+      image: "/images/cities/dallas.jpg",
+      alt: "Dallas skyline with modern buildings and cityscape",
+      description: "The vibrant heart of North Texas"
+    },
+    {
+      name: "McKinney",
+      image: "/images/cities/mckinney.jpg",
+      alt: "McKinney historic downtown with charming architecture",
+      description: "Historic charm meets modern living"
+    },
+    {
+      name: "Frisco",
+      image: "/images/cities/frisco.jpg",
+      alt: "Frisco modern suburban development and shopping",
+      description: "Fastest growing city in America"
+    },
+    {
+      name: "Prosper",
+      image: "/images/cities/prosper.jpg",
+      alt: "Prosper suburban neighborhood with modern homes",
+      description: "Family-friendly suburban community"
+    },
+    {
+      name: "Allen",
+      image: "/images/cities/allen.png",
+      alt: "Allen residential area with beautiful homes and landscaping",
+      description: "Premier residential destination"
+    },
+    {
+      name: "Plano",
+      image: "/images/cities/plano.jpg",
+      alt: "Plano corporate headquarters and business district",
+      description: "Corporate headquarters capital"
+    },
+    {
+      name: "Fairview",
+      image: "/images/cities/fairview.jpg",
+      alt: "Fairview residential community with modern homes",
+      description: "Peaceful suburban living"
+    },
+    {
+      name: "Addison",
+      image: "/images/cities/addison.jpg",
+      alt: "Addison business district and entertainment area",
+      description: "Business and entertainment hub"
+    },
+    {
+      name: "Flower Mound",
+      image: "/images/cities/flower-mound.jpg",
+      alt: "Flower Mound residential area with modern homes",
+      description: "Family-oriented community"
+    },
+    {
+      name: "Carrollton",
+      image: "/images/cities/carrollton.jpg",
+      alt: "Carrollton residential area with modern homes",
+      description: "Family-friendly suburban community"
+    },
+    {
+      name: "Coppell",
+      image: "/images/cities/coppell.jpg",
+      alt: "Coppell residential area with modern homes",
+      description: "Known for its welcoming atmosphere and wide array of attractions"
+    },
+    {
+      name: "Lewisville",
+      image: "/images/cities/lewisville.jpg",
+      alt: "Lewisville residential area with modern homes",
+      description: "Known for Lewisville Lake recreation"
+    }
+  ],
+  radius: "Metro Area Coverage"
+};
+
 // Contact Information
 export const CONTACT_INFO = {
   phone: BUSINESS_INFO.phone,
-  email: "service@championpoolandspa.com",
-  serviceArea: "Dallas-Fort Worth Metro Area",
-  businessHours: "Daily 9:00 AM - 7:00 PM",
-  serviceAreas: [
-    "Dallas",
-    "McKinney", 
-    "Frisco",
-    "Prosper",
-    "Allen",
-    "Plano",
-    "Fairview",
-    "Addison"
-  ]
+  email: BUSINESS_INFO.email,
+  serviceArea: SERVICE_AREA_DETAILS.primary,
+  businessHours: BUSINESS_INFO.businessHours.weekdays + ", " + BUSINESS_INFO.businessHours.saturday,
+  serviceAreas: SERVICE_AREA_DETAILS.cities.map(city => city.name)
 };
 
 // Services
 export const SERVICES = [
   {
-    title: "Pool Maintenance",
+    title: "Pool Cleaning",
     description: "Regular maintenance to ensure your pool operates at peak efficiency year-round.",
-    icon: "maintenance",
-    price: "From $120/month"
+    icon: "maintenance"
   },
   {
     title: "Pool Repairs", 
-    description: "Fast and reliable repair services for all types of pool equipment and structures.",
-    icon: "repair",
-    price: "From $150"
+    description: "Fast and reliable repair services for all types of pool equipment.",
+    icon: "repair"
   }
 ];
 
@@ -185,77 +261,12 @@ export const COLORS = {
   }
 };
 
-// Business Hours
-export const BUSINESS_HOURS = {
-  daily: "9:00 AM - 7:00 PM",
-  emergency: false
-};
-
-// Service Area Details
-export const SERVICE_AREA_DETAILS = {
-  primary: "Dallas-Fort Worth Metro Area",
-  cities: [
-    "Dallas",
-    "McKinney", 
-    "Frisco",
-    "Prosper",
-    "Allen",
-    "Plano",
-    "Fairview",
-    "Addison"
-  ],
-  radius: "Metro Area Coverage"
-};
-
-// City Images for Service Areas
-export const CITY_IMAGES = {
-  Dallas: {
-    image: "/images/cities/dallas.jpg",
-    alt: "Dallas skyline with modern buildings and cityscape",
-    description: "The vibrant heart of North Texas"
-  },
-  McKinney: {
-    image: "/images/cities/mckinney.jpg",
-    alt: "McKinney historic downtown with charming architecture",
-    description: "Historic charm meets modern living"
-  },
-  Frisco: {
-    image: "/images/cities/frisco.jpg",
-    alt: "Frisco modern suburban development and shopping",
-    description: "Fastest growing city in America"
-  },
-  Prosper: {
-    image: "/images/cities/prosper.jpg",
-    alt: "Prosper suburban neighborhood with modern homes",
-    description: "Family-friendly suburban community"
-  },
-  Allen: {
-    image: "/images/cities/allen.png",
-    alt: "Allen residential area with beautiful homes and landscaping",
-    description: "Premier residential destination"
-  },
-  Plano: {
-    image: "/images/cities/plano.jpg",
-    alt: "Plano corporate headquarters and business district",
-    description: "Corporate headquarters capital"
-  },
-  Fairview: {
-    image: "/images/cities/fairview.jpg",
-    alt: "Fairview residential community with modern homes",
-    description: "Peaceful suburban living"
-  },
-  Addison: {
-    image: "/images/cities/addison.jpg",
-    alt: "Addison business district and entertainment area",
-    description: "Business and entertainment hub"
-  }
-};
 
 // Gallery Categories
 export const GALLERY_CATEGORIES = {
-  Maintenance: {
-    name: "Maintenance",
-    description: "Regular pool maintenance and upkeep services",
+  Cleaning: {
+    name: "Cleaning",
+    description: "Regular pool cleaning and upkeep services",
     color: "blue"
   },
   Repair: {
@@ -269,15 +280,15 @@ export const GALLERY_CATEGORIES = {
 export const GALLERY_PROJECTS = [
   {
     id: 1,
-    title: "Weekly Cleaning",
-    category: "Maintenance",
-    description: "Complete skimming, vacuuming, and brushing to keep your pool sparkling clean. Professional weekly maintenance service for both residential and commercial pools.",
-    image: "/images/gallery/pool-maintenance.jpg",
+    title: "Weekly Pool Cleaning",
+    category: "Cleaning",
+    description: "Complete skimming, vacuuming, and brushing to keep your pool sparkling clean. Professional weekly cleaning service for both residential and commercial pools.",
+    image: "/images/gallery/pool-cleaning.jpg",
     beforeAfter: false
   },
   {
     id: 2,
-    title: "Equipment Repairs",
+    title: "Pool Equipment Repairs",
     category: "Repair",
     description: "Pump, filter, heater, and timer repairs to keep your system running smoothly. Expert repair services for all pool equipment with quick, reliable turnaround.",
     image: "/images/gallery/pool-repair.jpg",
@@ -285,16 +296,16 @@ export const GALLERY_PROJECTS = [
   },
   {
     id: 3,
-    title: "Filter Cleaning",
-    category: "Maintenance",
-    description: "Clean and maintain filters for optimal water circulation. Professional filter cleaning and maintenance services to ensure your pool water stays crystal clear.",
-    image: "/images/gallery/leak-detection.jpg",
+    title: "Clean Pool Results",
+    category: "Cleaning",
+    description: "Professional pool cleaning results that extend your pool and equipment life. Regular maintenance keeps your pool crystal clear and your equipment running efficiently.",
+    image: "/images/gallery/clean-pool.jpg",
     beforeAfter: false
   },
   {
     id: 4,
-    title: "Green to Clean",
-    category: "Maintenance",
+    title: "Green to Clean Transformation",
+    category: "Cleaning",
     description: "Transform algae-filled green pools back to crystal clear condition. Emergency pool recovery services using advanced treatment methods and professional expertise.",
     image: "/images/gallery/green-to-clean.jpg",
     beforeAfter: true

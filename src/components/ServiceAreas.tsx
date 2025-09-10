@@ -1,4 +1,4 @@
-import { CONTACT_INFO, CITY_IMAGES } from '@/utils/constants';
+import { CONTACT_INFO, SERVICE_AREA_DETAILS } from '@/utils/constants';
 
 export default function ServiceAreas() {
   return (
@@ -24,8 +24,11 @@ export default function ServiceAreas() {
 
           {/* Cities Grid */}
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            {/* TODO: Add cities to the service areas */}
             {CONTACT_INFO.serviceAreas.map((city) => {
-              const cityData = CITY_IMAGES[city as keyof typeof CITY_IMAGES];
+              const cityData = SERVICE_AREA_DETAILS.cities.find(c => c.name === city);
+              if (!cityData) return null;
               return (
                 <div 
                   key={city} 
@@ -34,8 +37,8 @@ export default function ServiceAreas() {
                   {/* City Image */}
                   <div className="relative h-48 overflow-hidden">
                     <img 
-                      src={cityData.image} 
-                      alt={cityData.alt}
+                      src={cityData?.image} 
+                      alt={cityData?.alt}
                       className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
@@ -44,7 +47,7 @@ export default function ServiceAreas() {
                         {city}
                       </h4>
                       <p className="text-white/90 text-sm">
-                        {cityData.description}
+                        {cityData?.description}
                       </p>
                     </div>
                   </div>
