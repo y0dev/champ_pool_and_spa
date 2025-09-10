@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 import { GALLERY_PROJECTS, GALLERY_CATEGORIES } from '@/utils/constants';
 
@@ -59,9 +60,11 @@ export default function Gallery({ onServiceSelect }: GalleryProps) {
               onClick={() => setSelectedProject(project)}
             >
               <div className="relative">
-                <img 
+                <Image 
                   src={project.image} 
                   alt={project.title}
+                  width={400}
+                  height={256}
                   className="w-full h-64 object-cover"
                 />
                 {project.beforeAfter && (
@@ -133,9 +136,11 @@ export default function Gallery({ onServiceSelect }: GalleryProps) {
                 </button>
               </div>
               
-              <img 
+              <Image 
                 src={selectedProject.image} 
                 alt={selectedProject.title}
+                width={600}
+                height={256}
                 className="w-full h-64 object-cover rounded-lg mb-4"
               />
               

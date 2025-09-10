@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { BUSINESS_INFO, CONTACT_INFO, TRUST_INDICATORS } from '@/utils/constants';
+import { BUSINESS_INFO, CONTACT_INFO } from '@/utils/constants';
+import Image from 'next/image';
 
 export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -131,11 +132,12 @@ export default function Hero() {
               {/* Hero Images with Fade Transition */}
               <div className="w-full h-96 lg:h-[500px] relative">
                 {heroImages.map((image, index) => (
-                  <img
+                  <Image
+                    fill
                     key={image}
                     src={image}
                     alt={`Pool and spa service ${index + 1}`}
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                    className={`absolute inset-0 object-cover transition-opacity duration-1000 ${
                       index === currentImageIndex && !isTransitioning
                         ? 'opacity-100'
                         : 'opacity-0'

@@ -1,4 +1,4 @@
-import { BUSINESS_INFO, CONTACT_INFO } from '@/utils/constants';
+import { BUSINESS_INFO } from '@/utils/constants';
 
 export default function About() {
   return (

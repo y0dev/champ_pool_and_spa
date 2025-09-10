@@ -1,5 +1,5 @@
 import { CONTACT_INFO, SERVICE_AREA_DETAILS } from '@/utils/constants';
-
+import Image from 'next/image';
 export default function ServiceAreas() {
   return (
     <section className="py-20 bg-blue-50">
@@ -36,10 +36,11 @@ export default function ServiceAreas() {
                 >
                   {/* City Image */}
                   <div className="relative h-48 overflow-hidden">
-                    <img 
+                    <Image
                       src={cityData?.image} 
                       alt={cityData?.alt}
-                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                      className="object-cover transition-transform duration-300 hover:scale-110"
+                      fill
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     <div className="absolute bottom-4 left-4 right-4">

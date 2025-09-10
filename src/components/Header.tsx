@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BUSINESS_INFO, NAV_LINKS } from '@/utils/constants';
-
+import { NAV_LINKS } from '@/utils/constants';
+import Image from 'next/image';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -27,13 +27,15 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3">
-              <img 
+              <Image 
                 src="/logo.png" 
                 alt="Champion Pool & Spa Logo" 
-                className="w-16 h-16 object-contain"
+                className="object-contain"
+                width={200}
+                height={100}
                 style={{ imageRendering: 'auto' }}
               />
-              <span className="text-2xl font-bold text-gray-900">{BUSINESS_INFO.name}</span>
+              {/* <span className="text-2xl font-bold text-gray-900">{BUSINESS_INFO.name}</span> */}
             </Link>
           </div>
 
