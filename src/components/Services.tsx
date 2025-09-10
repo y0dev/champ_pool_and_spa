@@ -51,8 +51,7 @@ export default function Services() {
               <p className="text-gray-600 mb-4">
                 {service.description}
               </p>
-              <div className="flex justify-between items-center">
-                <span className="text-blue-600 font-semibold">{service.price}</span>
+              <div className="flex justify-end items-center">
                 <a 
                   href="#contact" 
                   className="text-blue-600 hover:text-red-600 font-medium transition-colors"

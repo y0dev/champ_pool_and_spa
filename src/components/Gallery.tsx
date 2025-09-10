@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
-import { GALLERY_PROJECTS, GALLERY_CATEGORIES, POOL_TIPS } from '@/utils/constants';
+import { GALLERY_PROJECTS, GALLERY_CATEGORIES } from '@/utils/constants';
 
 interface GalleryProps {
   onServiceSelect: (service: string) => void;
@@ -59,9 +60,11 @@ export default function Gallery({ onServiceSelect }: GalleryProps) {
               onClick={() => setSelectedProject(project)}
             >
               <div className="relative">
-                <img 
+                <Image 
                   src={project.image} 
                   alt={project.title}
+                  width={400}
+                  height={256}
                   className="w-full h-64 object-cover"
                 />
                 {project.beforeAfter && (
@@ -133,9 +136,11 @@ export default function Gallery({ onServiceSelect }: GalleryProps) {
                 </button>
               </div>
               
-              <img 
+              <Image 
                 src={selectedProject.image} 
                 alt={selectedProject.title}
+                width={600}
+                height={256}
                 className="w-full h-64 object-cover rounded-lg mb-4"
               />
               
@@ -159,9 +164,7 @@ export default function Gallery({ onServiceSelect }: GalleryProps) {
                   onClick={() => {
                     // Map gallery category to contact form service
                     let serviceValue = '';
-                    if (selectedProject.category === 'Maintenance') {
-                      serviceValue = 'pool-maintenance';
-                    } else if (selectedProject.category === 'Repair') {
+                    if (selectedProject.category === 'Repair') {
                       serviceValue = 'pool-repairs';
                     } else if (selectedProject.category === 'Cleaning') {
                       serviceValue = 'pool-cleaning';
@@ -186,42 +189,6 @@ export default function Gallery({ onServiceSelect }: GalleryProps) {
           </div>
         </div>
       )}
-
-      {/* Pool Tips Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-            {/* Text Content */}
-            <div className="p-8 lg:p-12">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                {POOL_TIPS.title}
-              </h3>
-              <p className="text-gray-600 mb-8">
-                {POOL_TIPS.description}
-              </p>
-              <ul className="space-y-4">
-                {POOL_TIPS.benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span className="text-gray-700">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            {/* Image */}
-            <div className="relative">
-              <img 
-                src={POOL_TIPS.image} 
-                alt={POOL_TIPS.imageAlt}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { BUSINESS_INFO, CONTACT_INFO, FOOTER_LINKS } from '@/utils/constants';
-
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
@@ -9,12 +8,6 @@ export default function Footer() {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <img 
-                src="/logo.png" 
-                alt="Champion Pool & Spa Logo" 
-                className="w-12 h-12 object-contain"
-                style={{ imageRendering: 'auto' }}
-              />
               <span className="text-xl font-bold">{BUSINESS_INFO.name}</span>
             </div>
             <p className="text-gray-300 mb-4">
@@ -73,7 +66,8 @@ export default function Footer() {
                   <span>{CONTACT_INFO.email}</span>
                 </a>
               </li>
-              <li className="text-gray-300">{CONTACT_INFO.businessHours}</li>
+              <li className="text-gray-300"> M-F: {BUSINESS_INFO.businessHours.weekdays}</li>
+              <li className="text-gray-300"> Sat: {BUSINESS_INFO.businessHours.saturday}</li>
             </ul>
           </div>
         </div>
