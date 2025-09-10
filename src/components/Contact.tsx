@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { CONTACT_INFO, WEB3FORMS_CONFIG } from '@/utils/constants';
+import { BUSINESS_INFO, CONTACT_INFO, WEB3FORMS_CONFIG } from '@/utils/constants';
 
 interface ContactProps {
   selectedService?: string;
@@ -242,7 +242,7 @@ export default function Contact({ selectedService = '' }: ContactProps) {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                {/* <div className="flex items-start space-x-4">
                   <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -254,7 +254,7 @@ export default function Contact({ selectedService = '' }: ContactProps) {
                     <p className="text-gray-600">{CONTACT_INFO.serviceArea}</p>
                     <p className="text-gray-600">Serving {CONTACT_INFO.serviceAreas.join(', ')}</p>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start space-x-4">
                   <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
@@ -264,7 +264,8 @@ export default function Contact({ selectedService = '' }: ContactProps) {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Business Hours</h4>
-                    <p className="text-gray-600">Daily: {CONTACT_INFO.businessHours}</p>
+                    <p className="text-gray-600"> M-F: {BUSINESS_INFO.businessHours.weekdays}</p>
+                    <p className="text-gray-600"> Sat: {BUSINESS_INFO.businessHours.saturday}</p>
                     <p className="text-gray-600">Professional and Reliable</p>
                   </div>
                 </div>

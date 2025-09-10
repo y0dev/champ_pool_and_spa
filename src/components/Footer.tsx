@@ -73,7 +73,8 @@ export default function Footer() {
                   <span>{CONTACT_INFO.email}</span>
                 </a>
               </li>
-              <li className="text-gray-300">{CONTACT_INFO.businessHours}</li>
+              <li className="text-gray-300"> M-F: {BUSINESS_INFO.businessHours.weekdays}</li>
+              <li className="text-gray-300"> Sat: {BUSINESS_INFO.businessHours.saturday}</li>
             </ul>
           </div>
         </div>

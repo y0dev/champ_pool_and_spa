@@ -170,10 +170,7 @@ export const FOOTER_LINKS = {
     { name: "Services", href: "#services" },
     { name: "Contact", href: "#contact" }
   ],
-  services: [
-    "Pool Maintenance",
-    "Pool Repairs"
-  ]
+  services: SERVICES.map(service => service.title)
 };
 
 // Social Media

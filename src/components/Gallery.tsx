@@ -159,10 +159,10 @@ export default function Gallery({ onServiceSelect }: GalleryProps) {
                   onClick={() => {
                     // Map gallery category to contact form service
                     let serviceValue = '';
-                    if (selectedProject.category === 'Maintenance') {
-                      serviceValue = 'pool-maintenance';
-                    } else if (selectedProject.category === 'Repair') {
+                    if (selectedProject.category === 'Repair') {
                       serviceValue = 'pool-repairs';
+                    } else if (selectedProject.category === 'Cleaning') {
+                      serviceValue = 'pool-cleaning';
                     }
                     
                     onServiceSelect(serviceValue);
