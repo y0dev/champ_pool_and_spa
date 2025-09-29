@@ -204,6 +204,11 @@ export const SEO_METADATA = {
   alternates: {
     canonical: '/',
   },
+  icon: {
+    icon: '/favicon/favicon.ico',
+    shortcut: '/favicon/favicon-16x16.png',
+    apple: '/favicon/apple-touch-icon.png',
+  },
   openGraph: {
     title: "Champion Pool and Spa - Professional Pool & Spa Services",
     description: "Expert pool cleaning and repair services in Dallas-Fort Worth. Professional weekly cleaning, equipment repairs, and emergency pool recovery. Get your free quote today!",
