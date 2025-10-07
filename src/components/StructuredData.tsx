@@ -11,7 +11,7 @@ export default function StructuredData() {
         "description": BUSINESS_INFO.description,
         "url": "https://championpoolandspa.com",
         "telephone": CONTACT_INFO.phone,
-        "email": CONTACT_INFO.email,
+        // "email": CONTACT_INFO.email, // TODO: Uncomment when email domain is available
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Dallas-Fort Worth Metro Area",

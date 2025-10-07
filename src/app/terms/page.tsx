@@ -129,7 +129,7 @@ export default function TermsOfService() {
               <div className="bg-gray-50 p-4 rounded-lg">
                 <p className="text-gray-700">
                   <strong>{BUSINESS_INFO.name}</strong><br />
-                  Email: {CONTACT_INFO.email}<br />
+                  {/* Email: {CONTACT_INFO.email}<br /> TODO: Uncomment when email domain is available */}
                   Phone: {CONTACT_INFO.phone}<br />
                   Service Area: {CONTACT_INFO.serviceArea}<br />
                   Business Hours: {CONTACT_INFO.businessHours}
