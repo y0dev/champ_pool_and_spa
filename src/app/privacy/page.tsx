@@ -1,30 +1,42 @@
 import { BUSINESS_INFO, CONTACT_INFO } from '@/utils/constants';
 import Link from 'next/link';
+import Image from 'next/image';
+import Footer from '@/components/Footer';
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation Bar */}
-      <nav className="bg-white shadow-sm border-b">
+      <nav className="bg-white shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center h-auto sm:h-16 py-4 sm:py-0 space-y-4 sm:space-y-0">
             <div className="flex items-center space-x-8">
-              <Link href="/" className="text-lg sm:text-xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
-                ← Back to Home
+              <Link href="/" className="flex items-center space-x-3">
+                <Image 
+                  src="/logo.png" 
+                  alt="Champion Pool & Spa Logo" 
+                  className="object-contain"
+                  width={200}
+                  height={100}
+                  style={{ imageRendering: 'auto' }}
+                />
               </Link>
             </div>
             <div className="flex items-center space-x-4 sm:space-x-6 flex-wrap justify-center">
-              <Link href="/#services" className="text-gray-600 hover:text-blue-600 transition-colors text-sm sm:text-base">
+              <Link href="/#services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm sm:text-base">
                 Services
               </Link>
-              <Link href="/#about" className="text-gray-600 hover:text-blue-600 transition-colors text-sm sm:text-base">
+              <Link href="/#about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm sm:text-base">
                 About
               </Link>
-              <Link href="/#gallery" className="text-gray-600 hover:text-blue-600 transition-colors text-sm sm:text-base">
+              <Link href="/#gallery" className="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm sm:text-base">
                 Gallery
               </Link>
-              <Link href="/#contact" className="text-gray-600 hover:text-blue-600 transition-colors text-sm sm:text-base">
+              <Link href="/#contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm sm:text-base">
                 Contact
+              </Link>
+              <Link href="/" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors text-sm sm:text-base">
+                Back to Home
               </Link>
             </div>
           </div>
@@ -42,7 +54,7 @@ export default function PrivacyPolicy() {
               </p>
 
               <p className="text-gray-600 mb-6">
-                {BUSINESS_INFO.name} (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website or use our services.
+                {BUSINESS_INFO.name} (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website or use our professional pool and spa services in the Dallas-Fort Worth Metro Area.
               </p>
 
               <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Information We Collect</h2>
@@ -50,9 +62,10 @@ export default function PrivacyPolicy() {
                 We collect information you provide directly to us, such as when you:
               </p>
               <ul className="list-disc pl-6 text-gray-600 mb-6">
-                <li>Fill out our contact form</li>
-                <li>Request a quote for pool services</li>
-                <li>Schedule pool maintenance or repair services</li>
+                <li>Fill out our contact form to request a free quote</li>
+                <li>Schedule pool cleaning or pool repair services</li>
+                <li>Contact us for emergency pool services</li>
+                <li>Request information about our weekly pool maintenance services</li>
                 <li>Contact us for customer support</li>
               </ul>
 
@@ -62,15 +75,17 @@ export default function PrivacyPolicy() {
                 <li>Name and contact information (email, phone number, address)</li>
                 <li>Pool service requirements and preferences</li>
                 <li>Service history and maintenance records</li>
+                <li>Pool location and access information</li>
                 <li>Payment information (processed securely through third-party providers)</li>
               </ul>
 
               <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">How We Use Your Information</h2>
               <p className="text-gray-600 mb-4">We use the information we collect to:</p>
               <ul className="list-disc pl-6 text-gray-600 mb-6">
-                <li>Provide pool maintenance and repair services</li>
-                <li>Communicate with you about appointments and services</li>
-                <li>Send quotes and invoices</li>
+                <li>Provide professional pool cleaning and pool repair services</li>
+                <li>Schedule and manage weekly pool maintenance appointments</li>
+                <li>Communicate with you about service appointments and quotes</li>
+                <li>Send invoices and process payments</li>
                 <li>Improve our services and customer experience</li>
                 <li>Comply with legal obligations</li>
               </ul>
@@ -106,8 +121,10 @@ export default function PrivacyPolicy() {
               <div className="bg-gray-50 p-4 rounded-lg">
                 <p className="text-gray-700">
                   <strong>{BUSINESS_INFO.name}</strong><br />
-                  Email: {CONTACT_INFO.email}<br />
-                  Phone: {CONTACT_INFO.phone}
+                  {/* Email: {CONTACT_INFO.email}<br /> TODO: Uncomment when email domain is available */}
+                  Phone: {CONTACT_INFO.phone}<br />
+                  Service Area: {CONTACT_INFO.serviceArea}<br />
+                  Business Hours: {CONTACT_INFO.businessHours}
                 </p>
               </div>
 
@@ -119,6 +136,8 @@ export default function PrivacyPolicy() {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 }

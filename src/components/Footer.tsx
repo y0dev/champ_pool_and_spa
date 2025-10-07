@@ -55,6 +55,7 @@ export default function Footer() {
                   <span>{CONTACT_INFO.phone}</span>
                 </a>
               </li>
+              {/* TODO: Uncomment when email domain is available
               <li>
                 <a 
                   href={`mailto:${CONTACT_INFO.email}?subject=Pool Service Inquiry&body=Hi Julio,%0D%0A%0D%0AI'm interested in your pool services.%0D%0A%0D%0APlease provide more information about:%0D%0A- Pool maintenance services%0D%0A- Pool repair services%0D%0A- Pricing and availability%0D%0A%0D%0AThank you!`}
@@ -66,6 +67,7 @@ export default function Footer() {
                   <span>{CONTACT_INFO.email}</span>
                 </a>
               </li>
+              */}
               <li className="text-gray-300"> M-F: {BUSINESS_INFO.businessHours.weekdays}</li>
               <li className="text-gray-300"> Sat: {BUSINESS_INFO.businessHours.saturday}</li>
             </ul>
