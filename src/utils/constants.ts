@@ -309,8 +309,20 @@ export const GALLERY_PROJECTS = [
     title: "Green to Clean Transformation",
     category: "Cleaning",
     description: "Transform algae-filled green pools back to crystal clear condition. Emergency pool recovery services using advanced treatment methods and professional expertise.",
-    image: "/images/gallery/green-to-clean.jpg",
-    beforeAfter: true
+    image: "/images/gallery/green-to-clean.png",
+    beforeAfter: true,
+    beforeAfterImages: [
+      {
+        src: "/images/gallery/green-before.jpg",
+        alt: "Green algae-filled pool before treatment",
+        label: "Before"
+      },
+      {
+        src: "/images/gallery/clean-after.jpg",
+        alt: "Crystal clear pool after professional treatment",
+        label: "After"
+      }
+    ]
   }
 ];
 

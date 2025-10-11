@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 import { GALLERY_PROJECTS, GALLERY_CATEGORIES } from '@/utils/constants';
+import BeforeAfterSlideshow from './BeforeAfterSlideshow';
 
 interface GalleryProps {
   onServiceSelect: (service: string) => void;
@@ -60,13 +61,24 @@ export default function Gallery({ onServiceSelect }: GalleryProps) {
               onClick={() => setSelectedProject(project)}
             >
               <div className="relative">
-                <Image 
-                  src={project.image} 
-                  alt={project.title}
-                  width={400}
-                  height={256}
-                  className="w-full h-64 object-cover"
-                />
+                {project.beforeAfter && project.beforeAfterImages ? (
+                  <BeforeAfterSlideshow 
+                    images={project.beforeAfterImages} 
+                    className="h-64"
+                    showThumbnails={false}
+                    showArrows={false}
+                    autoPlay={true}
+                    autoPlayInterval={6000}
+                  />
+                ) : (
+                  <Image 
+                    src={project.image} 
+                    alt={project.title}
+                    width={400}
+                    height={256}
+                    className="w-full h-64 object-cover"
+                  />
+                )}
                 {project.beforeAfter && (
                   <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                     Before/After
@@ -136,13 +148,23 @@ export default function Gallery({ onServiceSelect }: GalleryProps) {
                 </button>
               </div>
               
-              <Image 
-                src={selectedProject.image} 
-                alt={selectedProject.title}
-                width={600}
-                height={256}
-                className="w-full h-64 object-cover rounded-lg mb-4"
-              />
+              {selectedProject.beforeAfter && selectedProject.beforeAfterImages ? (
+                <BeforeAfterSlideshow 
+                  images={selectedProject.beforeAfterImages} 
+                  className="mb-4"
+                  showThumbnails={true}
+                  showArrows={true}
+                  autoPlay={false}
+                />
+              ) : (
+                <Image 
+                  src={selectedProject.image} 
+                  alt={selectedProject.title}
+                  width={600}
+                  height={256}
+                  className="w-full h-64 object-cover rounded-lg mb-4"
+                />
+              )}
               
               <div className="mb-4">
                 <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
