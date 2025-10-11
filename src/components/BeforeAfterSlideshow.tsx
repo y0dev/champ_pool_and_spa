@@ -16,6 +16,7 @@ interface BeforeAfterSlideshowProps {
   showArrows?: boolean;
   autoPlay?: boolean;
   autoPlayInterval?: number;
+  splitView?: boolean;
 }
 
 export default function BeforeAfterSlideshow({ 
@@ -24,7 +25,8 @@ export default function BeforeAfterSlideshow({
   showThumbnails = true, 
   showArrows = true, 
   autoPlay = false, 
-  autoPlayInterval = 3000 
+  autoPlayInterval = 3000,
+  splitView = false
 }: BeforeAfterSlideshowProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -55,34 +57,77 @@ export default function BeforeAfterSlideshow({
     return null;
   }
 
+  // For split view, we need exactly 2 images (before and after)
+  const beforeImage = images.find(img => img.label.toLowerCase() === 'before');
+  const afterImage = images.find(img => img.label.toLowerCase() === 'after');
+
   return (
     <div className={`relative ${className}`}>
       {/* Main Image Display */}
       <div className="relative overflow-hidden rounded-lg h-64">
-        <div className="relative w-full h-full">
-          {images.map((image, index) => (
-            <Image
-              key={`${image.src}-${index}`}
-              src={image.src}
-              alt={image.alt}
-              width={600}
-              height={400}
-              className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${
-                index === currentIndex 
-                  ? 'opacity-100 scale-100' 
-                  : 'opacity-0 scale-105'
-              }`}
-            />
-          ))}
-        </div>
+        {splitView && beforeImage && afterImage ? (
+          // Split View: Before and After side by side
+          <div className="relative w-full h-full flex">
+            {/* Before Image - Left Half */}
+            <div className="relative w-1/2 h-full overflow-hidden">
+              <Image
+                src={beforeImage.src}
+                alt={beforeImage.alt}
+                width={300}
+                height={400}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                {beforeImage.label}
+              </div>
+            </div>
+            
+            {/* Divider Line */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-white shadow-lg transform -translate-x-1/2 z-10"></div>
+            
+            {/* After Image - Right Half */}
+            <div className="relative w-1/2 h-full overflow-hidden">
+              <Image
+                src={afterImage.src}
+                alt={afterImage.alt}
+                width={300}
+                height={400}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                {afterImage.label}
+              </div>
+            </div>
+          </div>
+        ) : (
+          // Regular Slideshow View
+          <div className="relative w-full h-full">
+            {images.map((image, index) => (
+              <Image
+                key={`${image.src}-${index}`}
+                src={image.src}
+                alt={image.alt}
+                width={600}
+                height={400}
+                className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${
+                  index === currentIndex 
+                    ? 'opacity-100 scale-100' 
+                    : 'opacity-0 scale-105'
+                }`}
+              />
+            ))}
+          </div>
+        )}
         
-        {/* Image Label Overlay */}
-        <div className="absolute top-4 left-4 bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
-          {images[currentIndex].label}
-        </div>
+        {/* Image Label Overlay - Only for regular slideshow */}
+        {!splitView && (
+          <div className="absolute top-4 left-4 bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+            {images[currentIndex].label}
+          </div>
+        )}
 
-        {/* Navigation Arrows */}
-        {images.length > 1 && showArrows && (
+        {/* Navigation Arrows - Only for regular slideshow */}
+        {images.length > 1 && showArrows && !splitView && (
           <>
             {currentIndex > 0 && (
               <button
@@ -110,8 +155,8 @@ export default function BeforeAfterSlideshow({
         )}
       </div>
 
-      {/* Thumbnail Navigation */}
-      {images.length > 1 && showThumbnails && (
+      {/* Thumbnail Navigation - Only for regular slideshow */}
+      {images.length > 1 && showThumbnails && !splitView && (
         <div className="flex justify-center gap-2 mt-4 mb-2">
           {images.map((image, index) => (
             <button
@@ -138,8 +183,8 @@ export default function BeforeAfterSlideshow({
         </div>
       )}
 
-      {/* Image Counter */}
-      {images.length > 1 && showThumbnails && (
+      {/* Image Counter - Only for regular slideshow */}
+      {images.length > 1 && showThumbnails && !splitView && (
         <div className="text-center mt-2 text-sm text-gray-600 transition-all duration-300 ease-in-out">
           <span className="inline-block transition-all duration-300 ease-in-out">
             {currentIndex + 1} of {images.length}

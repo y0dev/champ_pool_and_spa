@@ -69,6 +69,7 @@ export default function Gallery({ onServiceSelect }: GalleryProps) {
                     showArrows={false}
                     autoPlay={true}
                     autoPlayInterval={6000}
+                    splitView={project.splitView || false}
                   />
                 ) : (
                   <Image 
@@ -155,6 +156,7 @@ export default function Gallery({ onServiceSelect }: GalleryProps) {
                   showThumbnails={true}
                   showArrows={true}
                   autoPlay={false}
+                  splitView={selectedProject.splitView || false}
                 />
               ) : (
                 <Image 
