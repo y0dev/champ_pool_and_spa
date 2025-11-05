@@ -10,8 +10,8 @@ export default function StructuredData() {
         "name": BUSINESS_INFO.name,
         "description": BUSINESS_INFO.description,
         "url": "https://championpoolandspa.com",
-        "telephone": CONTACT_INFO.phone,
-        // "email": CONTACT_INFO.email, // TODO: Uncomment when email domain is available
+        "telephone": BUSINESS_INFO.phone,
+        "email": CONTACT_INFO.email,
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Dallas-Fort Worth Metro Area",
@@ -84,7 +84,7 @@ export default function StructuredData() {
         },
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": CONTACT_INFO.phone,
+          "telephone": BUSINESS_INFO.phone,
           "contactType": "customer service",
           "areaServed": "US",
           "availableLanguage": "English"

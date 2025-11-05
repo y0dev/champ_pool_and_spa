@@ -25,7 +25,6 @@ export default function ServiceAreas() {
           {/* Cities Grid */}
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-            {/* TODO: Add cities to the service areas */}
             {CONTACT_INFO.serviceAreas.map((city) => {
               const cityData = SERVICE_AREA_DETAILS.cities.find(c => c.name === city);
               if (!cityData) return null;

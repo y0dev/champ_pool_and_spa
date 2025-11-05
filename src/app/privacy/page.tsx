@@ -1,4 +1,4 @@
-import { BUSINESS_INFO, CONTACT_INFO } from '@/utils/constants';
+import { BUSINESS_INFO, SERVICE_AREA_DETAILS } from '@/utils/constants';
 import Link from 'next/link';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
@@ -121,10 +121,10 @@ export default function PrivacyPolicy() {
               <div className="bg-gray-50 p-4 rounded-lg">
                 <p className="text-gray-700">
                   <strong>{BUSINESS_INFO.name}</strong><br />
-                  {/* Email: {CONTACT_INFO.email}<br /> TODO: Uncomment when email domain is available */}
-                  Phone: {CONTACT_INFO.phone}<br />
-                  Service Area: {CONTACT_INFO.serviceArea}<br />
-                  Business Hours: {CONTACT_INFO.businessHours}
+                  Email: {BUSINESS_INFO.email}<br />
+                  Phone: {BUSINESS_INFO.phone}<br />
+                  Service Area: {SERVICE_AREA_DETAILS.primary}<br />
+                  Business Hours: {BUSINESS_INFO.businessHours.weekdays + ", " + BUSINESS_INFO.businessHours.saturday}
                 </p>
               </div>
 
