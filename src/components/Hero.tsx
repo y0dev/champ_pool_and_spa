@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { BUSINESS_INFO, CONTACT_INFO } from '@/utils/constants';
+import { BUSINESS_INFO, SERVICE_AREA_DETAILS } from '@/utils/constants';
 import Image from 'next/image';
 
 export default function Hero() {
@@ -62,7 +62,7 @@ export default function Hero() {
                 Get a Free Quote
               </a>
               <a 
-                href={`tel:${CONTACT_INFO.phone}`}
+                href={`tel:${BUSINESS_INFO.phone}`}
                 className="bg-white text-blue-700 hover:bg-red-50 hover:text-red-700 border-2 border-white px-8 py-4 rounded-xl font-display font-semibold text-lg transition-all duration-300 hover:scale-105 transform text-center flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,7 +79,7 @@ export default function Hero() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span>{CONTACT_INFO.serviceArea}</span>
+                <span>{SERVICE_AREA_DETAILS.primary}</span>
               </div>
               <div className="flex items-center gap-2 min-w-[200px]">
                 <svg className="w-5 h-5 text-red-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
